@@ -7,81 +7,83 @@ const token = process.env.GH_TOKEN
 
 if (!username || !token) process.exit(1)
 
-const headers = {
+const graphqlHeaders = {
   Authorization: `Bearer ${token}`,
-  Accept: 'application/vnd.github+json'
+  'Content-Type': 'application/json'
 }
 
-async function getRepos() {
-  const res = await axios.get(
-    `https://api.github.com/users/${username}/repos?per_page=100`,
-    { headers }
-  )
-  return res.data
-}
-
-async function getLanguages(url) {
-  const res = await axios.get(url, { headers })
-  return res.data
-}
-
-function generateLanguageBars(languages) {
-  const total = Object.values(languages).reduce((a, b) => a + b, 0)
-
-  const sorted = Object.entries(languages)
-    .map(([name, value]) => ({
-      name,
-      percent: (value / total) * 100
-    }))
-    .sort((a, b) => b.percent - a.percent)
-
-  const width = 700
-  const barHeight = 24
-  const gap = 10
-  const startY = 30
-
-  const colorScale = d3.scaleOrdinal(d3.schemeTableau10)
-
-  let svg = `
-    <text x="0" y="20" font-family="Arial" font-size="18" fill="#000">
-      Top Languages by Usage
-    </text>
-  `
-
-  sorted.forEach((lang, i) => {
-    const y = startY + i * (barHeight + gap)
-    const barWidth = (lang.percent / 100) * width
-    const color = colorScale(lang.name)
-
-    svg += `
-      <rect x="0" y="${y}" width="${barWidth}" height="${barHeight}" fill="${color}" rx="6" />
-      <text x="10" y="${y + 16}" font-family="Arial" font-size="14" fill="#ffffff">
-        ${lang.name} ${lang.percent.toFixed(1)}%
-      </text>
+async function getContributions() {
+  const query = {
+    query: `
+      query {
+        user(login: "${username}") {
+          contributionsCollection {
+            contributionCalendar {
+              weeks {
+                contributionDays {
+                  date
+                  contributionCount
+                }
+              }
+            }
+          }
+        }
+      }
     `
+  }
+
+  const res = await axios.post(
+    'https://api.github.com/graphql',
+    query,
+    { headers: graphqlHeaders }
+  )
+
+  return res.data.data.user.contributionsCollection.contributionCalendar.weeks
+}
+
+function getColor(count) {
+  if (count === 0) return '#161b22'
+  if (count < 2) return '#0e4429'
+  if (count < 5) return '#006d32'
+  if (count < 10) return '#26a641'
+  return '#39d353'
+}
+
+function generateCalendarSvg(weeks) {
+  const cell = 12
+  const gap = 3
+  const width = weeks.length * (cell + gap)
+  const height = 7 * (cell + gap)
+
+  let svg = ''
+
+  weeks.forEach((week, wIndex) => {
+    week.contributionDays.forEach((day, dIndex) => {
+      const x = wIndex * (cell + gap)
+      const y = dIndex * (cell + gap)
+      const color = getColor(day.contributionCount)
+
+      svg += `
+        <rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${color}" />
+      `
+    })
   })
 
-  return { svg, height: startY + sorted.length * (barHeight + gap) }
+  return { svg, width, height }
 }
 
 async function main() {
-  const repos = await getRepos()
+  const weeks = await getContributions()
 
-  let languageTotals = {}
-
-  for (const repo of repos) {
-    if (repo.fork) continue
-    const langs = await getLanguages(repo.languages_url)
-    for (const [name, value] of Object.entries(langs)) {
-      languageTotals[name] = (languageTotals[name] || 0) + value
-    }
-  }
-
-  const { svg: languageSvg, height } = generateLanguageBars(languageTotals)
+  const { svg: calendarSvg, width, height } =
+    generateCalendarSvg(weeks)
 
   const svgContent = `
-    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="${height}">
-      ${languageSvg}
+    <svg xmlns="http://www.w3.org/2000/svg"
+         width="${width}"
+         height="${height}"
+         viewBox="0 0 ${width} ${height}">
+      ${calendarSvg}
     </svg>
   `
 
