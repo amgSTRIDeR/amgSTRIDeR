@@ -25,7 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: amgSTRIDeR
-        run: node .github/scripts/generate-calendar.mjs
+        run: node .github/scripts/generate-calendar.js
 
       - name: Commit and push updated README
         run: |
