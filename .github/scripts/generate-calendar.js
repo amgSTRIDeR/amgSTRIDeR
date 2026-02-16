@@ -72,31 +72,89 @@ async function getContributions() {
   return res.data.data.user.contributionsCollection.contributionCalendar.weeks
 }
 
-function getColor(count) {
-  if (count === 0) return '#161b22'
-  if (count < 2) return '#0e4429'
-  if (count < 5) return '#006d32'
-  if (count < 10) return '#26a641'
-  return '#39d353'
-}
-
-function generateCalendar(weeks, offsetX, offsetY) {
-  const cell = 12
-  const gap = 3
-
-  let svg = ''
-  weeks.forEach((week, wIndex) => {
-    week.contributionDays.forEach((day, dIndex) => {
-      const x = offsetX + wIndex * (cell + gap)
-      const y = offsetY + dIndex * (cell + gap)
-      svg += `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${getColor(day.contributionCount)}" />`
+function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
+  const days = []
+  weeks.forEach(week => {
+    week.contributionDays.forEach(day => {
+      days.push(day.contributionCount)
     })
   })
 
+  const displayDays = days.slice(-35)
+  const maxContributions = Math.max(...displayDays, 1)
+  
+  const graphWidth = width - 100
+  const graphHeight = height - 60
+  const startX = offsetX + 50
+  const startY = offsetY + 30
+  
+  const stepX = graphWidth / (displayDays.length - 1)
+  
+  let points = ''
+  let areaPoints = `${startX},${startY + graphHeight} `
+  
+  displayDays.forEach((count, i) => {
+    const x = startX + i * stepX
+    const y = startY + graphHeight - (count / maxContributions) * graphHeight
+    points += `${x},${y} `
+    areaPoints += `${x},${y} `
+  })
+  
+  areaPoints += `${startX + (displayDays.length - 1) * stepX},${startY + graphHeight}`
+  
+  let gridLines = ''
+  for (let i = 0; i <= 7; i++) {
+    const y = startY + (graphHeight / 7) * i
+    gridLines += `<line x1="${startX}" y1="${y}" x2="${startX + graphWidth}" y2="${y}" stroke="#30363d" stroke-width="1" opacity="0.3" />`
+  }
+  
+  for (let i = 0; i < displayDays.length; i += 5) {
+    const x = startX + i * stepX
+    gridLines += `<line x1="${x}" y1="${startY}" x2="${x}" y2="${startY + graphHeight}" stroke="#30363d" stroke-width="1" opacity="0.2" />`
+  }
+  
+  let yLabels = ''
+  for (let i = 0; i <= 7; i++) {
+    const y = startY + (graphHeight / 7) * (7 - i)
+    const value = Math.round((maxContributions / 7) * i)
+    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="Segoe UI, Arial" font-size="11" fill="#8b949e">${value}</text>`
+  }
+  
+  let xLabels = ''
+  const labelIndices = [0, Math.floor(displayDays.length / 2), displayDays.length - 1]
+  labelIndices.forEach(i => {
+    const x = startX + i * stepX
+    const dayLabel = i === 0 ? displayDays.length : i === displayDays.length - 1 ? 1 : Math.floor(displayDays.length / 2)
+    xLabels += `<text x="${x}" y="${startY + graphHeight + 20}" text-anchor="middle" font-family="Segoe UI, Arial" font-size="11" fill="#8b949e">${dayLabel}</text>`
+  })
+  
+
+  let circles = ''
+  displayDays.forEach((count, i) => {
+    const x = startX + i * stepX
+    const y = startY + graphHeight - (count / maxContributions) * graphHeight
+    if (count > 0) {
+      circles += `<circle cx="${x}" cy="${y}" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" />`
+    } else {
+      circles += `<circle cx="${x}" cy="${y}" r="2.5" fill="#30363d" opacity="0.5" />`
+    }
+  })
+  
+  let svg = `
+    ${gridLines}
+    <polyline points="${areaPoints}" fill="url(#areaGradient)" opacity="0.4" />
+    <polyline points="${points}" fill="none" stroke="#39d353" stroke-width="2.5" stroke-linejoin="round" />
+    ${circles}
+    ${yLabels}
+    ${xLabels}
+    <text x="${startX + graphWidth / 2}" y="${startY + graphHeight + 45}" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#8b949e">Days</text>
+    <text x="${startX - 35}" y="${startY + graphHeight / 2}" text-anchor="middle" font-family="Segoe UI, Arial" font-size="12" fill="#8b949e" transform="rotate(-90 ${startX - 35} ${startY + graphHeight / 2})">Contributions</text>
+  `
+  
   return {
     svg,
-    width: weeks.length * (cell + gap),
-    height: 7 * (cell + gap)
+    width,
+    height
   }
 }
 
@@ -150,23 +208,31 @@ async function main() {
 
   const padding = 30
   const cardWidth = 900
+  const graphHeight = 280
 
-  const calendar = generateCalendar(weeks, padding, 80)
+  const graph = generateContributionGraph(weeks, padding, 80, cardWidth - padding * 2, graphHeight)
   const languages = generateLanguages(
     languageTotals,
     padding,
-    80 + calendar.height + 50,
+    80 + graph.height + 50,
     cardWidth - padding * 2
   )
 
   const totalHeight =
-    80 + calendar.height + 50 + languages.height + 40
+    80 + graph.height + 50 + languages.height + 40
 
   const svgContent = `
     <svg xmlns="http://www.w3.org/2000/svg"
          width="${cardWidth}"
          height="${totalHeight}"
          viewBox="0 0 ${cardWidth} ${totalHeight}">
+      
+      <defs>
+        <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#39d353;stop-opacity:0.6" />
+          <stop offset="100%" style="stop-color:#39d353;stop-opacity:0.05" />
+        </linearGradient>
+      </defs>
       
       <rect width="100%" height="100%" fill="#0d1117" />
       <rect x="10" y="10" width="${cardWidth - 20}" height="${totalHeight - 20}"
@@ -176,19 +242,19 @@ async function main() {
             font-family="Segoe UI, Arial"
             font-size="22"
             fill="#c9d1d9">
-        ${username}'s GitHub Activity
+        ${username}'s Contribution Graph
       </text>
 
       <text x="${padding}" y="70"
             font-family="Segoe UI, Arial"
             font-size="14"
             fill="#8b949e">
-        Contribution Calendar
+        Last 35 Days Activity
       </text>
 
-      ${calendar.svg}
+      ${graph.svg}
 
-      <text x="${padding}" y="${80 + calendar.height + 25}"
+      <text x="${padding}" y="${80 + graph.height + 25}"
             font-family="Segoe UI, Arial"
             font-size="14"
             fill="#8b949e">
