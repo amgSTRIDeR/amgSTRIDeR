@@ -194,7 +194,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
 
     svg += `
       <rect x="${offsetX}" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${color}" />
-      <text x="${offsetX + 8}" y="${y + 13}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#161b22" font-weight="700">
+      <text x="${offsetX + 8}" y="${y + 13}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9" font-weight="600">
         ${lang.name} ${lang.percent.toFixed(1)}%
       </text>
     `
