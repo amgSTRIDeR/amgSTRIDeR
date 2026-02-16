@@ -1,7 +1,7 @@
 import fs from 'fs-extra';
 import axios from 'axios';
 import d3 from 'd3';
-import D3Node from 'd3-node';
+import { D3Node } from 'd3-node';
 import moment from 'moment';
 
 const username = process.env.USERNAME;
