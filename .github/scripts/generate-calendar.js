@@ -17,29 +17,32 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#f7df1e',
+  JavaScript: '#f1e05a',
   TypeScript: '#3178c6',
   HTML: '#e34c26',
-  CSS: '#264de4',
-  PHP: '#777bb4',
+  CSS: '#563d7c',
+  PHP: '#4F5D95',
   Shell: '#89e051',
-  Python: '#3776ab',
-  Go: '#00add8',
-  Rust: '#ce422b',
-  Java: '#f89820',
-  C: '#a8b9cc',
+  Python: '#3572A5',
+  Go: '#00ADD8',
+  Rust: '#dea584',
+  Java: '#b07219',
+  C: '#555555',
   'C++': '#f34b7d',
-  Ruby: '#cc342d',
-  Swift: '#f05138',
-  Kotlin: '#7f52ff',
-  Dart: '#00b4ab',
-  Vue: '#42b883',
-  Svelte: '#ff3e00',
-  Scala: '#dc322f',
-  Lua: '#5a5fd8',
+  Ruby: '#701516',
+  Swift: '#F05138',
+  Kotlin: '#A97BFF',
+  Dart: '#00B4AB',
+  Vue: '#41b883',
+  Svelte: '#FF3E00',
+  Scala: '#c22d40',
+  Lua: '#000080',
   Perl: '#0298c3',
-  R: '#198ce7',
-  Objective: '#438eff'
+  R: '#198CE7',
+  'Objective-C': '#438eff',
+  CoffeeScript: '#244776',
+  Elixir: '#6e4a7e',
+  Haskell: '#5e5086'
 }
 
 async function getRepos() {
@@ -191,7 +194,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
 
     svg += `
       <rect x="${offsetX}" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${color}" />
-      <text x="${offsetX + 8}" y="${y + 13}" font-family="Segoe UI, Arial" font-size="12" fill="#ffffff">
+      <text x="${offsetX + 8}" y="${y + 13}" font-family="Segoe UI, Arial" font-size="12" fill="#0d1117" font-weight="600">
         ${lang.name} ${lang.percent.toFixed(1)}%
       </text>
     `
