@@ -19,13 +19,13 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install axios fs-extra d3 d3-node moment
+        run: npm install
 
       - name: Generate GitHub-style calendar
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: amgSTRIDeR
-        run: node .github/scripts/generate-calendar.js
+        run: node .github/scripts/generate-calendar.mjs
 
       - name: Commit and push updated README
         run: |
