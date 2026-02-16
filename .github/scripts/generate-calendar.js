@@ -131,7 +131,7 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   for (let i = 0; i <= 7; i++) {
     const y = startY + (graphHeight / 7) * (7 - i)
     const value = Math.round((maxContributions / 7) * i)
-    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#8b949e">${value}</text>`
+    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`
   }
   
   let xLabels = ''
@@ -139,7 +139,7 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   labelIndices.forEach(i => {
     const x = startX + i * stepX
     const dayLabel = i === 0 ? displayDays.length : i === displayDays.length - 1 ? 1 : Math.floor(displayDays.length / 2)
-    xLabels += `<text x="${x}" y="${startY + graphHeight + 20}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#8b949e">${dayLabel}</text>`
+    xLabels += `<text x="${x}" y="${startY + graphHeight + 20}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${dayLabel}</text>`
   })
   
 
@@ -161,8 +161,8 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
     ${circles}
     ${yLabels}
     ${xLabels}
-    <text x="${startX + graphWidth / 2}" y="${startY + graphHeight + 45}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b949e">Days</text>
-    <text x="${startX - 35}" y="${startY + graphHeight / 2}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8b949e" transform="rotate(-90 ${startX - 35} ${startY + graphHeight / 2})">Contributions</text>
+    <text x="${startX + graphWidth / 2}" y="${startY + graphHeight + 45}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9">Days</text>
+    <text x="${startX - 35}" y="${startY + graphHeight / 2}" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9" transform="rotate(-90 ${startX - 35} ${startY + graphHeight / 2})">Contributions</text>
   `
   
   return {
@@ -262,7 +262,7 @@ async function main() {
       <text x="${padding}" y="70"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
             font-size="14"
-            fill="#8b949e">
+            fill="#c9d1d9">
         Last 35 Days Activity
       </text>
 
@@ -271,7 +271,7 @@ async function main() {
       <text x="${padding}" y="${80 + graph.height + 25}"
             font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif"
             font-size="14"
-            fill="#8b949e">
+            fill="#c9d1d9">
         Top Languages
       </text>
 
