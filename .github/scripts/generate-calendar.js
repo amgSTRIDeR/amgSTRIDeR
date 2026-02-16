@@ -1,6 +1,6 @@
 import fs from 'fs-extra';
 import axios from 'axios';
-import d3 from 'd3';
+import * as d3 from 'd3';
 import { D3Node } from 'd3-node';
 import moment from 'moment';
 
@@ -43,7 +43,6 @@ async function getCommits(repo) {
   }
 }
 
-
 function generateSVG(commitsMap, languageCount) {
   const d3n = new D3Node();
   const weekWidth = 15;
@@ -82,9 +81,9 @@ function generateSVG(commitsMap, languageCount) {
       .text(`${count} commit(s) on ${date.format('YYYY-MM-DD')}`);
   });
 
-  const totalLangs = Object.values(languageCount).reduce((a, b) => a + b, 0);
   let xOffset = 10;
   const yOffset = days * dayHeight + 25;
+  const totalLangs = Object.values(languageCount).reduce((a, b) => a + b, 0);
   Object.entries(languageCount).forEach(([lang, count]) => {
     const width = (count / totalLangs) * (weeks * weekWidth);
     svg.append('rect')
