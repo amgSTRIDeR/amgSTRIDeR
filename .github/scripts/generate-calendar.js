@@ -1,7 +1,7 @@
 const fs = require('fs-extra');
 const axios = require('axios');
-const D3Node = require('d3-node');
 const d3 = require('d3');
+const D3Node = require('d3-node').default || require('d3-node');
 const moment = require('moment');
 
 const username = process.env.USERNAME;
