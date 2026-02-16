@@ -80,15 +80,15 @@ function getColor(count) {
   return '#39d353'
 }
 
-function generateCalendarSvg(weeks) {
+function generateCalendar(weeks, offsetX, offsetY) {
   const cell = 12
   const gap = 3
 
   let svg = ''
   weeks.forEach((week, wIndex) => {
     week.contributionDays.forEach((day, dIndex) => {
-      const x = wIndex * (cell + gap)
-      const y = dIndex * (cell + gap)
+      const x = offsetX + wIndex * (cell + gap)
+      const y = offsetY + dIndex * (cell + gap)
       svg += `<rect x="${x}" y="${y}" width="${cell}" height="${cell}" rx="2" fill="${getColor(day.contributionCount)}" />`
     })
   })
@@ -100,7 +100,7 @@ function generateCalendarSvg(weeks) {
   }
 }
 
-function generateLanguageBars(languages, offsetY) {
+function generateLanguages(languages, offsetX, offsetY, maxWidth) {
   const total = Object.values(languages).reduce((a, b) => a + b, 0)
 
   const sorted = Object.entries(languages)
@@ -110,20 +110,19 @@ function generateLanguageBars(languages, offsetY) {
     }))
     .sort((a, b) => b.percent - a.percent)
 
-  const width = 800
-  const barHeight = 20
-  const gap = 8
+  const barHeight = 18
+  const gap = 10
 
   let svg = ''
 
   sorted.slice(0, 6).forEach((lang, i) => {
     const y = offsetY + i * (barHeight + gap)
-    const barWidth = (lang.percent / 100) * width
+    const barWidth = (lang.percent / 100) * maxWidth
     const color = githubLanguageColors[lang.name] || '#30363d'
 
     svg += `
-      <rect x="0" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${color}" />
-      <text x="10" y="${y + 14}" font-family="Arial" font-size="13" fill="#ffffff">
+      <rect x="${offsetX}" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${color}" />
+      <text x="${offsetX + 8}" y="${y + 13}" font-family="Segoe UI, Arial" font-size="12" fill="#ffffff">
         ${lang.name} ${lang.percent.toFixed(1)}%
       </text>
     `
@@ -131,7 +130,7 @@ function generateLanguageBars(languages, offsetY) {
 
   return {
     svg,
-    height: offsetY + sorted.slice(0, 6).length * (barHeight + gap)
+    height: sorted.slice(0, 6).length * (barHeight + gap)
   }
 }
 
@@ -149,18 +148,53 @@ async function main() {
     }
   }
 
-  const calendar = generateCalendarSvg(weeks)
-  const languages = generateLanguageBars(languageTotals, calendar.height + 30)
+  const padding = 30
+  const cardWidth = 900
 
-  const totalHeight = languages.height + 20
-  const totalWidth = Math.max(calendar.width, 800)
+  const calendar = generateCalendar(weeks, padding, 80)
+  const languages = generateLanguages(
+    languageTotals,
+    padding,
+    80 + calendar.height + 50,
+    cardWidth - padding * 2
+  )
+
+  const totalHeight =
+    80 + calendar.height + 50 + languages.height + 40
 
   const svgContent = `
     <svg xmlns="http://www.w3.org/2000/svg"
-         width="${totalWidth}"
+         width="${cardWidth}"
          height="${totalHeight}"
-         viewBox="0 0 ${totalWidth} ${totalHeight}">
+         viewBox="0 0 ${cardWidth} ${totalHeight}">
+      
+      <rect width="100%" height="100%" fill="#0d1117" />
+      <rect x="10" y="10" width="${cardWidth - 20}" height="${totalHeight - 20}"
+            rx="12" fill="#0d1117" stroke="#30363d" />
+
+      <text x="${padding}" y="45"
+            font-family="Segoe UI, Arial"
+            font-size="22"
+            fill="#c9d1d9">
+        ${username}'s GitHub Activity
+      </text>
+
+      <text x="${padding}" y="70"
+            font-family="Segoe UI, Arial"
+            font-size="14"
+            fill="#8b949e">
+        Contribution Calendar
+      </text>
+
       ${calendar.svg}
+
+      <text x="${padding}" y="${80 + calendar.height + 25}"
+            font-family="Segoe UI, Arial"
+            font-size="14"
+            fill="#8b949e">
+        Top Languages
+      </text>
+
       ${languages.svg}
     </svg>
   `
