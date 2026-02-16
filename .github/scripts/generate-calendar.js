@@ -38,6 +38,11 @@ async function getContributions() {
     { headers: graphqlHeaders }
   )
 
+  if (!res.data.data) {
+    console.log(res.data)
+    process.exit(1)
+  }
+
   return res.data.data.user.contributionsCollection.contributionCalendar.weeks
 }
 
