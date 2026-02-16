@@ -17,32 +17,32 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#d4a904',
-  TypeScript: '#2862a6',
-  HTML: '#c43a1a',
-  CSS: '#4a2f69',
-  PHP: '#3d4a7a',
-  Shell: '#5a9c28',
-  Python: '#2a5a87',
-  Go: '#00748c',
-  Rust: '#a05a3a',
-  Java: '#8a5913',
-  C: '#3d3d3d',
-  'C++': '#d12855',
-  Ruby: '#5a1010',
-  Swift: '#cc3d24',
-  Kotlin: '#7d4fd9',
-  Dart: '#007770',
-  Vue: '#2f9668',
-  Svelte: '#cc3100',
-  Scala: '#9c2333',
-  Lua: '#000066',
-  Perl: '#0278a0',
-  R: '#1470b8',
-  'Objective-C': '#2d6fcc',
-  CoffeeScript: '#1c3657',
-  Elixir: '#5a3a66',
-  Haskell: '#4a3e6e'
+  JavaScript: '#f1e05a',
+  TypeScript: '#3178c6',
+  HTML: '#e34c26',
+  CSS: '#563d7c',
+  PHP: '#4F5D95',
+  Shell: '#89e051',
+  Python: '#3572A5',
+  Go: '#00ADD8',
+  Rust: '#dea584',
+  Java: '#b07219',
+  C: '#555555',
+  'C++': '#f34b7d',
+  Ruby: '#701516',
+  Swift: '#F05138',
+  Kotlin: '#A97BFF',
+  Dart: '#00B4AB',
+  Vue: '#41b883',
+  Svelte: '#FF3E00',
+  Scala: '#c22d40',
+  Lua: '#000080',
+  Perl: '#0298c3',
+  R: '#198CE7',
+  'Objective-C': '#438eff',
+  CoffeeScript: '#244776',
+  Elixir: '#6e4a7e',
+  Haskell: '#5e5086'
 }
 
 async function getRepos() {
@@ -181,28 +181,55 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
       percent: (value / total) * 100
     }))
     .sort((a, b) => b.percent - a.percent)
+    .slice(0, 6)
 
-  const barHeight = 18
-  const gap = 10
-
+  const radius = 90
+  const centerX = offsetX + radius + 20
+  const centerY = offsetY + radius + 20
+  
   let svg = ''
-
-  sorted.slice(0, 6).forEach((lang, i) => {
-    const y = offsetY + i * (barHeight + gap)
-    const barWidth = (lang.percent / 100) * maxWidth
+  let currentAngle = -90
+  
+  sorted.forEach((lang) => {
+    const angle = (lang.percent / 100) * 360
     const color = githubLanguageColors[lang.name] || '#30363d'
-
+    
+    const startAngle = currentAngle * Math.PI / 180
+    const endAngle = (currentAngle + angle) * Math.PI / 180
+    
+    const x1 = centerX + radius * Math.cos(startAngle)
+    const y1 = centerY + radius * Math.sin(startAngle)
+    const x2 = centerX + radius * Math.cos(endAngle)
+    const y2 = centerY + radius * Math.sin(endAngle)
+    
+    const largeArc = angle > 180 ? 1 : 0
+    
+    svg += `<path d="M ${centerX} ${centerY} L ${x1} ${y1} A ${radius} ${radius} 0 ${largeArc} 1 ${x2} ${y2} Z" fill="${color}" />`
+    
+    currentAngle += angle
+  })
+  
+  const legendX = centerX + radius + 40
+  const legendItemHeight = 24
+  
+  sorted.forEach((lang, i) => {
+    const y = offsetY + 10 + i * legendItemHeight
+    const color = githubLanguageColors[lang.name] || '#30363d'
+    
     svg += `
-      <rect x="${offsetX}" y="${y}" width="${barWidth}" height="${barHeight}" rx="6" fill="${color}" />
-      <text x="${offsetX + 8}" y="${y + 13}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9" font-weight="600">
-        ${lang.name} ${lang.percent.toFixed(1)}%
+      <rect x="${legendX}" y="${y}" width="16" height="16" rx="3" fill="${color}" />
+      <text x="${legendX + 24}" y="${y + 12}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#c9d1d9" font-weight="500">
+        ${lang.name}
+      </text>
+      <text x="${legendX + 180}" y="${y + 12}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#8b949e">
+        ${lang.percent.toFixed(1)}%
       </text>
     `
   })
-
+  
   return {
     svg,
-    height: sorted.slice(0, 6).length * (barHeight + gap)
+    height: radius * 2 + 40
   }
 }
 
