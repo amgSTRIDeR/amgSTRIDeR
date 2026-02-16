@@ -1,142 +1,102 @@
-import fs from 'fs-extra';
-import axios from 'axios';
-import * as d3 from 'd3';
-import { D3Node } from 'd3-node';
-import moment from 'moment';
+import fs from 'fs-extra'
+import axios from 'axios'
+import * as d3 from 'd3'
 
-const username = process.env.USERNAME;
-const token = process.env.GH_TOKEN;
-const headers = { Authorization: `token ${token}` };
+const username = process.env.USERNAME
+const token = process.env.GH_TOKEN
 
-const LANG_COLORS = {
-  JavaScript: '#f1e05a',
-  TypeScript: '#2b7489',
-  Python: '#3572A5',
-  HTML: '#e34c26',
-  CSS: '#563d7c',
-  Java: '#b07219',
-  C: '#555555',
-  'C++': '#f34b7d',
-  PHP: '#4F5D95',
-  Ruby: '#701516',
-  Go: '#00ADD8',
-  Rust: '#dea584',
-  Shell: '#89e051',
-  default: '#cccccc'
-};
+if (!username || !token) process.exit(1)
+
+const headers = {
+  Authorization: `Bearer ${token}`,
+  Accept: 'application/vnd.github+json'
+}
 
 async function getRepos() {
-  const res = await axios.get('https://api.github.com/user/repos?per_page=100', { headers });
-  return res.data.filter(repo => !repo.fork);
+  const res = await axios.get(
+    `https://api.github.com/users/${username}/repos?per_page=100`,
+    { headers }
+  )
+  return res.data
 }
 
-async function getCommits(repo) {
-  const since = moment().subtract(1, 'year').toISOString();
-  try {
-    const res = await axios.get(
-      `https://api.github.com/repos/${username}/${repo.name}/commits?author=${username}&since=${since}&per_page=100`,
-      { headers }
-    );
-    return res.data;
-  } catch {
-    return [];
-  }
+async function getLanguages(url) {
+  const res = await axios.get(url, { headers })
+  return res.data
 }
 
-function generateSVG(commitsMap, languageCount) {
-  const d3n = new D3Node();
-  const weekWidth = 15;
-  const dayHeight = 15;
-  const weeks = 53;
-  const days = 7;
-  const svgHeight = days * dayHeight + 50;
-  const svgWidth = weeks * weekWidth + 20;
-  const svg = d3n.createSVG(svgWidth, svgHeight);
+function generateLanguageBars(languages) {
+  const total = Object.values(languages).reduce((a, b) => a + b, 0)
 
-  const dates = [];
-  for (let i = 0; i <= 365; i++) {
-    const day = moment().subtract(365 - i, 'days');
-    dates.push(day);
-  }
+  const sorted = Object.entries(languages)
+    .map(([name, value]) => ({
+      name,
+      percent: (value / total) * 100
+    }))
+    .sort((a, b) => b.percent - a.percent)
 
-  const maxCommits = Math.max(...Object.values(commitsMap), 1);
-  const colorScale = d3.scaleLinear()
-    .domain([0, maxCommits])
-    .range(['#ebedf0', '#196127']);
+  const width = 700
+  const barHeight = 24
+  const gap = 10
+  const startY = 30
 
-  dates.forEach(date => {
-    const week = Math.floor((date.dayOfYear() + date.isoWeekday()) / 7);
-    const dayOfWeek = date.day();
-    const count = commitsMap[date.format('YYYY-MM-DD')] || 0;
+  const colorScale = d3.scaleOrdinal(d3.schemeTableau10)
 
-    svg.append('rect')
-      .attr('x', week * weekWidth + 10)
-      .attr('y', dayOfWeek * dayHeight + 10)
-      .attr('width', 12)
-      .attr('height', 12)
-      .attr('fill', colorScale(count))
-      .attr('rx', 3)
-      .attr('ry', 3)
-      .append('title')
-      .text(`${count} commit(s) on ${date.format('YYYY-MM-DD')}`);
-  });
+  let svg = `
+    <text x="0" y="20" font-family="Arial" font-size="18" fill="#000">
+      Top Languages by Usage
+    </text>
+  `
 
-  let xOffset = 10;
-  const yOffset = days * dayHeight + 25;
-  const totalLangs = Object.values(languageCount).reduce((a, b) => a + b, 0);
-  Object.entries(languageCount).forEach(([lang, count]) => {
-    const width = (count / totalLangs) * (weeks * weekWidth);
-    svg.append('rect')
-      .attr('x', xOffset)
-      .attr('y', yOffset)
-      .attr('width', width)
-      .attr('height', 12)
-      .attr('fill', LANG_COLORS[lang] || LANG_COLORS.default)
-      .append('title')
-      .text(`${lang}: ${count} repo(s)`);
-    xOffset += width;
-  });
+  sorted.forEach((lang, i) => {
+    const y = startY + i * (barHeight + gap)
+    const barWidth = (lang.percent / 100) * width
+    const color = colorScale(lang.name)
 
-  return d3n.svgString();
+    svg += `
+      <rect x="0" y="${y}" width="${barWidth}" height="${barHeight}" fill="${color}" rx="6" />
+      <text x="10" y="${y + 16}" font-family="Arial" font-size="14" fill="#ffffff">
+        ${lang.name} ${lang.percent.toFixed(1)}%
+      </text>
+    `
+  })
+
+  return { svg, height: startY + sorted.length * (barHeight + gap) }
 }
 
 async function main() {
-  const repos = await getRepos();
-  const commitsMap = {};
-  const languageCount = {};
+  const repos = await getRepos()
+
+  let languageTotals = {}
 
   for (const repo of repos) {
-    if (repo.language) {
-      languageCount[repo.language] = (languageCount[repo.language] || 0) + 1;
+    if (repo.fork) continue
+    const langs = await getLanguages(repo.languages_url)
+    for (const [name, value] of Object.entries(langs)) {
+      languageTotals[name] = (languageTotals[name] || 0) + value
     }
-
-    const commits = await getCommits(repo);
-    commits.forEach(c => {
-      const date = moment(c.commit.author.date).format('YYYY-MM-DD');
-      commitsMap[date] = (commitsMap[date] || 0) + 1;
-    });
   }
 
-  const svgString = generateSVG(commitsMap, languageCount);
+  const { svg: languageSvg, height } = generateLanguageBars(languageTotals)
 
-  const statsBlock = `
-<!-- stats start -->
-**Repositories:** ${repos.length}  |  **Languages:** ${Object.keys(languageCount).join(', ')}  
+  const svgContent = `
+    <svg xmlns="http://www.w3.org/2000/svg" width="800" height="${height}">
+      ${languageSvg}
+    </svg>
+  `
 
-![GitHub-style Calendar + Languages](data:image/svg+xml;base64,${Buffer.from(svgString).toString('base64')})
-<!-- stats end -->
-`;
+  await fs.writeFile('stats.svg', svgContent)
 
-  const readmePath = 'README.md';
-  let readme = await fs.readFile(readmePath, 'utf-8');
-  if (readme.includes('<!-- stats start -->')) {
-    readme = readme.replace(/<!-- stats start -->[\s\S]*<!-- stats end -->/, statsBlock);
-  } else {
-    readme += `\n\n${statsBlock}`;
-  }
+  const readme = await fs.readFile('README.md', 'utf-8')
 
-  await fs.writeFile(readmePath, readme);
-  console.log('README updated with GitHub-style calendar and language bars!');
+  const updated = readme.replace(
+    /<!-- stats start -->[\s\S]*?<!-- stats end -->/,
+    `<!-- stats start -->
+![GitHub Stats](stats.svg)
+<!-- stats end -->`
+  )
+
+  await fs.writeFile('README.md', updated)
 }
 
-await main();
+main()

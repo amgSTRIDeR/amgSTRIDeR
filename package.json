@@ -1,10 +1,10 @@
 {
   "type": "module",
+  "private": true,
   "dependencies": {
     "axios": "^1.6.0",
     "d3": "^7.0.0",
     "d3-node": "^4.0.1",
-    "fs-extra": "^11.1.1",
-    "moment": "^2.30.0"
+    "fs-extra": "^11.1.1"
   }
 }
