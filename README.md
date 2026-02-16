@@ -38,6 +38,14 @@ Building scalable Angular applications and reusable components.
 
 ---
 
+## 💡 Coding Challenges
+
+[![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
+
+[![LeetCode](https://img.shields.io/badge/LeetCode-8%2F3845%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
+
+---
+
 ## ⚡ Background
 
 Power Engineer turned Software Engineer. 12 years in mission-critical operations, now building reliable software solutions.
@@ -48,7 +56,6 @@ Power Engineer turned Software Engineer. 12 years in mission-critical operations
 
 📧 [amgstrider@gmail.com](mailto:amgstrider@gmail.com)  
 💼 [LinkedIn](https://www.linkedin.com/in/aleksei-ovchinnikov)
-
 
 <!-- stats start -->
 <!-- stats end -->
