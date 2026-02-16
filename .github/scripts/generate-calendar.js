@@ -17,7 +17,7 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#d4a82e',
+  JavaScript: '#d4a904',
   TypeScript: '#2862a6',
   HTML: '#c43a1a',
   CSS: '#4a2f69',
