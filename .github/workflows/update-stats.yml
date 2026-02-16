@@ -1,4 +1,4 @@
-name: Update GitHub Stats
+name: Update GitHub Calendar Stats
 
 on:
   schedule:
@@ -21,16 +21,16 @@ jobs:
       - name: Install dependencies
         run: npm install axios fs-extra d3 d3-node moment
 
-      - name: Generate stats
+      - name: Generate GitHub-style calendar
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           USERNAME: amgSTRIDeR
-        run: node .github/scripts/generate-stats.js
+        run: node .github/scripts/generate-calendar.js
 
       - name: Commit and push updated README
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add README.md
-          git commit -m "Update GitHub stats" || echo "No changes"
+          git commit -m "Update GitHub-style calendar" || echo "No changes"
           git push
