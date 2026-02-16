@@ -17,18 +17,29 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#ffd700',
-  TypeScript: '#0057b8',
+  JavaScript: '#f7df1e',
+  TypeScript: '#3178c6',
   HTML: '#e34c26',
-  CSS: '#563d7c',
-  PHP: '#4F5D95',
+  CSS: '#264de4',
+  PHP: '#777bb4',
   Shell: '#89e051',
-  Python: '#3572A5',
-  Go: '#00ADD8',
-  Rust: '#dea584',
-  Java: '#b07219',
-  C: '#555555',
-  'C++': '#f34b7d'
+  Python: '#3776ab',
+  Go: '#00add8',
+  Rust: '#ce422b',
+  Java: '#f89820',
+  C: '#a8b9cc',
+  'C++': '#f34b7d',
+  Ruby: '#cc342d',
+  Swift: '#f05138',
+  Kotlin: '#7f52ff',
+  Dart: '#00b4ab',
+  Vue: '#42b883',
+  Svelte: '#ff3e00',
+  Scala: '#dc322f',
+  Lua: '#5a5fd8',
+  Perl: '#0298c3',
+  R: '#198ce7',
+  Objective: '#438eff'
 }
 
 async function getRepos() {
