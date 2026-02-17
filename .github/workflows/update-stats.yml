@@ -27,6 +27,11 @@ jobs:
           USERNAME: amgSTRIDeR
         run: node .github/scripts/generate-calendar.js
 
+      - name: Update LeetCode Stats
+        env:
+          LEETCODE_USERNAME: amgSTRIDeR
+        run: node .github/scripts/update-leetcode-stats.js
+
       - name: Commit and push updated README and SVG
         run: |
           git config --global user.name "github-actions"
