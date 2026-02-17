@@ -48,7 +48,7 @@ Building scalable Angular applications and reusable components
 
 ## ⚡ Background
 
-Former Hydroelectric Plant Control Room Shift Supervisor, now Software Engineer. 12 years in safety-critical operations and team leadership, focused on building reliable software
+Reliability-first engineer with 12 years of leadership in safety-critical operations, experienced in high-pressure decision-making and team coordination
 
 ---
 
