@@ -2,7 +2,7 @@
 
 **Software Engineer** | Frontend-focused
 
-Building scalable Angular applications and reusable components.
+Building scalable Angular applications and reusable components
 
 ---
 
@@ -48,7 +48,7 @@ Building scalable Angular applications and reusable components.
 
 ## ⚡ Background
 
-Power Engineer turned Software Engineer. 12 years in mission-critical operations, now building reliable software solutions.
+Former Hydroelectric Plant Control Room Shift Supervisor, now Software Engineer. 12 years in safety-critical operations and team leadership, focused on building reliable software
 
 ---
 
