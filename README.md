@@ -49,6 +49,11 @@ Building scalable Angular applications and reusable components
 
 ---
 
+<!-- stats start -->
+<!-- stats end -->
+
+---
+
 ## ⚡ Background
 
 Reliability-first engineer with 12 years of leadership in safety-critical operations, experienced in high-pressure decision-making and team coordination
@@ -102,6 +107,3 @@ Reliability-first engineer with 12 years of leadership in safety-critical operat
 
 📧 [amgstrider@gmail.com](mailto:amgstrider@gmail.com)  
 💼 [LinkedIn](https://www.linkedin.com/in/aleksei-ovchinnikov)
-
-<!-- stats start -->
-<!-- stats end -->
