@@ -57,29 +57,44 @@ Reliability-first engineer with 12 years of leadership in safety-critical operat
 
 ## 🚀 Selected Educational Projects
 
-- [Rick and Morty Characters](https://amgstrider-rsreact.netlify.app/) — character catalog with API avatars, search, and page-based navigation
-  
-	<a href="https://amgstrider-rsreact.netlify.app/"><img src="https://image.thum.io/get/width/300/noanimate/https://amgstrider-rsreact.netlify.app/" alt="Rick and Morty Characters"/></a>
-
-- [Minesweeper](https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/) — browser game with field-size/mines settings, timer and move counters, flags, save/load, and results
-  
-	<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/"><img src="https://image.thum.io/get/width/300/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/" alt="Minesweeper"/></a>
-
-- [Shelter](https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/) — shelter website with dedicated pages (including `pets.html`), donation/contact sections, and responsive layout
-  
-	<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/"><img src="https://image.thum.io/get/width/300/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/" alt="Shelter"/></a>
-
-- [Songbird](https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/) — video-game music quiz with scoring, leaderboard (Results), and Collection section
-  
-	<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/"><img src="https://image.thum.io/get/width/300/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/" alt="Songbird"/></a>
-
-- [Online Zoo](https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/) — PetStory website with dedicated pages (including `donate.html`), animal cards, and testimonials
-  
-	<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/"><img src="https://image.thum.io/get/width/300/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/" alt="Online Zoo"/></a>
-
-- [Eldritch Horror Deck Builder](https://amgstrider.github.io/EldritchHorror_codejam/) — CodeJam helper for Mythos deck setup: Ancient selection, 5 difficulty levels, stage-based shuffle, and deck tracker
-
-	<a href="https://amgstrider.github.io/EldritchHorror_codejam/"><img src="https://image.thum.io/get/width/300/noanimate/https://amgstrider.github.io/EldritchHorror_codejam/" alt="Eldritch Horror Deck Builder"/></a>
+<table>
+	<tr>
+		<td width="50%" valign="top">
+			<a href="https://amgstrider-rsreact.netlify.app/"><img src="https://image.thum.io/get/width/220/noanimate/https://amgstrider-rsreact.netlify.app/" alt="Rick and Morty Characters"/></a><br/>
+			<a href="https://amgstrider-rsreact.netlify.app/"><strong>Rick and Morty Characters</strong></a><br/>
+			Character catalog with API avatars, search, and page-based navigation.
+		</td>
+		<td width="50%" valign="top">
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/" alt="Minesweeper"/></a><br/>
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/"><strong>Minesweeper</strong></a><br/>
+			Browser game with field-size/mines settings, timer and move counters, flags, save/load, and results.
+		</td>
+	</tr>
+	<tr>
+		<td width="50%" valign="top">
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/" alt="Shelter"/></a><br/>
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/"><strong>Shelter</strong></a><br/>
+			Shelter website with dedicated pages (including pets.html), donation/contact sections, and responsive layout.
+		</td>
+		<td width="50%" valign="top">
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/" alt="Songbird"/></a><br/>
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/"><strong>Songbird</strong></a><br/>
+			Video-game music quiz with scoring, leaderboard (Results), and Collection section.
+		</td>
+	</tr>
+	<tr>
+		<td width="50%" valign="top">
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/" alt="Online Zoo"/></a><br/>
+			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/"><strong>Online Zoo</strong></a><br/>
+			PetStory website with dedicated pages (including donate.html), animal cards, and testimonials.
+		</td>
+		<td width="50%" valign="top">
+			<a href="https://amgstrider.github.io/EldritchHorror_codejam/"><img src="https://image.thum.io/get/width/220/noanimate/https://amgstrider.github.io/EldritchHorror_codejam/" alt="Eldritch Horror Deck Builder"/></a><br/>
+			<a href="https://amgstrider.github.io/EldritchHorror_codejam/"><strong>Eldritch Horror Deck Builder</strong></a><br/>
+			CodeJam helper for Mythos deck setup: Ancient selection, 5 difficulty levels, stage-based shuffle, and deck tracker.
+		</td>
+	</tr>
+</table>
 
 ---
 
