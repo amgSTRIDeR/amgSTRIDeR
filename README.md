@@ -66,60 +66,60 @@ Reliability-first engineer with 12 years of leadership in safety-critical operat
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/Angular_YouTube-Client"><strong>1. Angular YouTube Client</strong></a><br/>
-         <img src="docs/thumbnails/angular-youtube-client.gif" alt="Angular YouTube Client preview" width="100%"/><br/>
+         <img src="docs/thumbnails/angular-youtube-client.webp" alt="Angular YouTube Client preview" width="100%"/><br/>
          Educational Angular 15 YouTube client (RS School): search, sorting/filtering, detailed view, custom cards, auth guards, NgRx, Angular Material.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/RS_React"><strong>2. RS React</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/rs-react.webp" alt="RS React preview" width="100%"/><br/>
          Educational React project - RS School course assignments and practice.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/songbird"><strong>3. Songbird</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/songbird.webp" alt="Songbird preview" width="100%"/><br/>
          Songbird - Can you name that game? A musical quiz game challenging players to identify video games by their iconic soundtracks and theme songs.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/shelter"><strong>4. Shelter</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/Shelter.webp" alt="Shelter preview" width="100%"/><br/>
          Educational project: responsive website for "Cozy House" animal shelter. Practice in HTML, CSS, and JavaScript layout development.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/online-zoo"><strong>5. Online Zoo</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/online-zoo.webp" alt="Online Zoo preview" width="100%"/><br/>
          Educational web project featuring an online zoo platform with animal information, live stream previews, and donation system. Built with vanilla JavaScript, SCSS, and Webpack.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/minesweeper"><strong>6. Minesweeper</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/minesweeper.webp" alt="Minesweeper preview" width="100%"/><br/>
          Classic Minesweeper game recreation with timer, flag system, and customizable grid sizes.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/momentum"><strong>7. Momentum</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/momento.webp" alt="Momentum preview" width="100%"/><br/>
          A feature-rich productivity dashboard with music player, todo list, weather widget, and daily quotes. Built with vanilla JavaScript.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/travel"><strong>8. Travel</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/Travel.webp" alt="Travel preview" width="100%"/><br/>
          A small travel-themed web app built with vanilla JavaScript and SCSS.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/EldritchHorror_codejam"><strong>9. Eldritch Horror Codejam</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/EldritchHorror.webp" alt="Eldritch Horror Codejam preview" width="100%"/><br/>
          Deck builder and manager for the Eldritch Horror board game, created during a code jam.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/Linear_Function"><strong>10. Linear Function</strong></a><br/>
-         <em>GIF placeholder</em><br/>
+         <img src="docs/thumbnails/linear.webp" alt="Linear Function preview" width="100%"/><br/>
          Web-based calculator for generating responsive CSS calc() functions using linear interpolation between viewport widths and pixel values.
       </td>
    </tr>
