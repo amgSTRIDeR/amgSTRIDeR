@@ -60,45 +60,69 @@ Reliability-first engineer with 12 years of leadership in safety-critical operat
 
 ---
 
-## 🚀 Selected Educational Projects
+## 🚀 Projects
 
 <table>
-	<tr>
-		<td width="50%" valign="top">
-			<a href="https://amgstrider-rsreact.netlify.app/"><img src="https://image.thum.io/get/width/220/noanimate/https://amgstrider-rsreact.netlify.app/" alt="Rick and Morty Characters"/></a><br/>
-			<a href="https://amgstrider-rsreact.netlify.app/"><strong>Rick and Morty Characters</strong></a><br/>
-			Character catalog with API avatars, search, and page-based navigation.
-		</td>
-		<td width="50%" valign="top">
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/" alt="Minesweeper"/></a><br/>
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/minesweeper/"><strong>Minesweeper</strong></a><br/>
-			Browser game with field-size/mines settings, timer and move counters, flags, save/load, and results.
-		</td>
-	</tr>
-	<tr>
-		<td width="50%" valign="top">
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/" alt="Shelter"/></a><br/>
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2023Q1/shelter/"><strong>Shelter</strong></a><br/>
-			Shelter website with dedicated pages (including pets.html), donation/contact sections, and responsive layout.
-		</td>
-		<td width="50%" valign="top">
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/" alt="Songbird"/></a><br/>
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/songbird/"><strong>Songbird</strong></a><br/>
-			Video-game music quiz with scoring, leaderboard (Results), and Collection section.
-		</td>
-	</tr>
-	<tr>
-		<td width="50%" valign="top">
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/"><img src="https://image.thum.io/get/width/220/noanimate/https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/" alt="Online Zoo"/></a><br/>
-			<a href="https://rolling-scopes-school.github.io/amgstrider-JSFE2022Q3/online-zoo/"><strong>Online Zoo</strong></a><br/>
-			PetStory website with dedicated pages (including donate.html), animal cards, and testimonials.
-		</td>
-		<td width="50%" valign="top">
-			<a href="https://amgstrider.github.io/EldritchHorror_codejam/"><img src="https://image.thum.io/get/width/220/noanimate/https://amgstrider.github.io/EldritchHorror_codejam/" alt="Eldritch Horror Deck Builder"/></a><br/>
-			<a href="https://amgstrider.github.io/EldritchHorror_codejam/"><strong>Eldritch Horror Deck Builder</strong></a><br/>
-			CodeJam helper for Mythos deck setup: Ancient selection, 5 difficulty levels, stage-based shuffle, and deck tracker.
-		</td>
-	</tr>
+   <tr>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/Angular_YouTube-Client"><strong>1. Angular YouTube Client</strong></a><br/>
+         <img src="docs/thumbnails/angular-youtube-client.gif" alt="Angular YouTube Client preview" width="100%"/><br/>
+         Educational Angular 15 YouTube client (RS School): search, sorting/filtering, detailed view, custom cards, auth guards, NgRx, Angular Material.
+      </td>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/RS_React"><strong>2. RS React</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Educational React project - RS School course assignments and practice.
+      </td>
+   </tr>
+   <tr>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/songbird"><strong>3. Songbird</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Songbird - Can you name that game? A musical quiz game challenging players to identify video games by their iconic soundtracks and theme songs.
+      </td>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/shelter"><strong>4. Shelter</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Educational project: responsive website for "Cozy House" animal shelter. Practice in HTML, CSS, and JavaScript layout development.
+      </td>
+   </tr>
+   <tr>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/online-zoo"><strong>5. Online Zoo</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Educational web project featuring an online zoo platform with animal information, live stream previews, and donation system. Built with vanilla JavaScript, SCSS, and Webpack.
+      </td>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/minesweeper"><strong>6. Minesweeper</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Classic Minesweeper game recreation with timer, flag system, and customizable grid sizes.
+      </td>
+   </tr>
+   <tr>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/momentum"><strong>7. Momentum</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         A feature-rich productivity dashboard with music player, todo list, weather widget, and daily quotes. Built with vanilla JavaScript.
+      </td>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/travel"><strong>8. Travel</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         A small travel-themed web app built with vanilla JavaScript and SCSS.
+      </td>
+   </tr>
+   <tr>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/EldritchHorror_codejam"><strong>9. Eldritch Horror Codejam</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Deck builder and manager for the Eldritch Horror board game, created during a code jam.
+      </td>
+      <td width="50%" valign="top">
+         <a href="https://github.com/amgSTRIDeR/Linear_Function"><strong>10. Linear Function</strong></a><br/>
+         <em>GIF placeholder</em><br/>
+         Web-based calculator for generating responsive CSS calc() functions using linear interpolation between viewport widths and pixel values.
+      </td>
+   </tr>
 </table>
 
 ---
