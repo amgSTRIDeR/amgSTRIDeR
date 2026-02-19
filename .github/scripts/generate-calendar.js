@@ -20,7 +20,7 @@ const githubLanguageColors = {
   JavaScript: '#F8E547',
   TypeScript: '#5B9FD8',
   HTML: '#E8652A',
-  CSS: '#3B8AC4',
+  CSS: '#5BBE9B',
   SCSS: '#D689C9',
   PHP: '#6C7BB5',
   Shell: '#8BC34A',
@@ -33,7 +33,7 @@ const githubLanguageColors = {
   Ruby: '#B54A4A',
   Swift: '#F26F4C',
   Kotlin: '#9D7AD9',
-  Dart: '#3FAFA4',
+  Dart: '#3B8AC4',
   Vue: '#5BBE9B',
   Svelte: '#F2644C',
   Scala: '#C85A6B',
@@ -41,10 +41,10 @@ const githubLanguageColors = {
   Perl: '#4A8DB7',
   R: '#5A92C8',
   'Objective-C': '#6B9BE8',
-  CoffeeScript: '#4B6A8C',
+  CoffeeScript: '#4C9AE8',
   Elixir: '#8B6AA8',
   Haskell: '#7A6FA0',
-  Dockerfile: '#4C9AE8'
+  Dockerfile: '#4B6A8C'
 }
 
 async function getRepos() {
