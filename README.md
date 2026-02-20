@@ -50,60 +50,60 @@ Projects were developed in 2022-2023 independently without AI assistance during 
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/Angular_YouTube-Client"><strong>1. Angular YouTube Client</strong></a><br/>
-         <img src="docs/thumbnails/angular-youtube-client.webp" alt="Angular YouTube Client preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/angular-youtube-client.webp" alt="Angular YouTube Client preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Educational Angular 15 YouTube client (RS School): search, sorting/filtering, detailed view, custom cards, auth guards, NgRx, Angular Material.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/RS_React"><strong>2. RS React</strong></a><br/>
-         <img src="docs/thumbnails/rs-react.webp" alt="RS React preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/rs-react.webp" alt="RS React preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Educational React project - RS School course assignments and practice.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/songbird"><strong>3. Songbird</strong></a><br/>
-         <img src="docs/thumbnails/songbird.webp" alt="Songbird preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/songbird.webp" alt="Songbird preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Songbird - Can you name that game? A musical quiz game challenging players to identify video games by their iconic soundtracks and theme songs.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/shelter"><strong>4. Shelter</strong></a><br/>
-         <img src="docs/thumbnails/Shelter.webp" alt="Shelter preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/Shelter.webp" alt="Shelter preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Educational project: responsive website for "Cozy House" animal shelter. Practice in HTML, CSS, and JavaScript layout development.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/online-zoo"><strong>5. Online Zoo</strong></a><br/>
-         <img src="docs/thumbnails/online-zoo.webp" alt="Online Zoo preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/online-zoo.webp" alt="Online Zoo preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Educational web project featuring an online zoo platform with animal information, live stream previews, and donation system. Built with vanilla JavaScript, SCSS, and Webpack.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/minesweeper"><strong>6. Minesweeper</strong></a><br/>
-         <img src="docs/thumbnails/minesweeper.webp" alt="Minesweeper preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/minesweeper.webp" alt="Minesweeper preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Classic Minesweeper game recreation with timer, flag system, and customizable grid sizes.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/momentum"><strong>7. Momentum</strong></a><br/>
-         <img src="docs/thumbnails/momento.webp" alt="Momentum preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/momento.webp" alt="Momentum preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> A feature-rich productivity dashboard with music player, todo list, weather widget, and daily quotes. Built with vanilla JavaScript.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/travel"><strong>8. Travel</strong></a><br/>
-         <img src="docs/thumbnails/Travel.webp" alt="Travel preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/Travel.webp" alt="Travel preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> A small travel-themed web app built with vanilla JavaScript and SCSS.
       </td>
    </tr>
    <tr>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/EldritchHorror_codejam"><strong>9. Eldritch Horror Codejam</strong></a><br/>
-         <img src="docs/thumbnails/EldritchHorror.webp" alt="Eldritch Horror Codejam preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/EldritchHorror.webp" alt="Eldritch Horror Codejam preview" width="100%"/></div><br/>
          <a href="https://rs.school/"><img src="docs/thumbnails/rss_logo.png" alt="RS School" height="18"/></a> Deck builder and manager for the Eldritch Horror board game, created during a code jam.
       </td>
       <td width="50%" valign="top">
          <a href="https://github.com/amgSTRIDeR/Linear_Function"><strong>10. Linear Function</strong></a><br/>
-         <img src="docs/thumbnails/linear.webp" alt="Linear Function preview" width="100%"/><br/>
+         <div style="background: #1a1a1a; border: 1px solid #30363d; border-radius: 4px; overflow: hidden;"><img src="docs/thumbnails/linear.webp" alt="Linear Function preview" width="100%"/></div><br/>
          Web-based calculator for generating responsive CSS calc() functions using linear interpolation between viewport widths and pixel values.
       </td>
    </tr>
