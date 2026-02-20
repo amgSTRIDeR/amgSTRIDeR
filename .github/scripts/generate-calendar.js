@@ -43,8 +43,7 @@ const githubLanguageColors = {
   'Objective-C': '#7B9BC8',
   CoffeeScript: '#6B9BA8',
   Elixir: '#B8A0C8',
-  Haskell: '#A0A0B8',
-  Dockerfile: '#6B8BA8'
+  Haskell: '#A0A0B8'
 }
 
 const trackedTechnologies = [
