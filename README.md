@@ -2,7 +2,13 @@
 
 **Software Engineer** | Frontend-focused
 
-Building scalable Angular applications and reusable components
+Building reliable web applications and embeddable feature systems
+
+---
+
+## ⚡ Background
+
+Software Engineer with 2+ years of frontend experience and a strong engineering mindset shaped by 10+ years in safety-critical hydropower operations. Experienced in high-responsibility environments requiring reliability, structured incident response, and risk-aware decision-making.
 
 ---
 
@@ -28,39 +34,24 @@ Building scalable Angular applications and reusable components
 
 ---
 
-## 🌐 Languages
-
-![Russian-Native](https://img.shields.io/badge/Russian-6B8DC3?style=for-the-badge&logoColor=white)![Native-555555](https://img.shields.io/badge/Native-555555?style=for-the-badge&logoColor=white)
-
-![English-C1](https://img.shields.io/badge/English-9B7BA8?style=for-the-badge&logoColor=white)![C1%20(IELTS%202023)-555555](https://img.shields.io/badge/C1%20(IELTS%202023)-555555?style=for-the-badge&logoColor=white)
-
-![Spanish-A2](https://img.shields.io/badge/Spanish-E8C547?style=for-the-badge&logoColor=black)![A2-555555](https://img.shields.io/badge/A2-555555?style=for-the-badge&logoColor=white)
-
----
-
-## 💡 Coding Challenges
-
-[![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
-
-<!-- leetcode start -->
-[![LeetCode](https://img.shields.io/badge/LeetCode-8%2F3845%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
-[![Easy](https://img.shields.io/badge/Easy-0%2F0-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-0%2F0-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-0%2F0-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
-<!-- leetcode end -->
-
----
-
 <!-- stats start -->
+<table>
+   <tr>
+      <td width="50%" valign="top">
+         <img src="stats.svg" alt="GitHub Stats and Language Stack" width="100%" />
+      </td>
+      <td width="50%" valign="top">
+         <img src="docs/thumbnails/technology-stack.svg" alt="Technology Stack from Dependencies" width="100%" />
+      </td>
+   </tr>
+</table>
 <!-- stats end -->
 
 ---
 
-## ⚡ Background
+## 🚀 Educational Projects
 
-Reliability-first engineer with 12 years of leadership in safety-critical operations, experienced in high-pressure decision-making and team coordination
-
----
-
-## 🚀 Projects
+All projects below are educational and focused on hands-on practice.
 
 <table>
    <tr>
@@ -124,6 +115,27 @@ Reliability-first engineer with 12 years of leadership in safety-critical operat
       </td>
    </tr>
 </table>
+
+---
+
+## 💡 Coding Challenges
+
+[![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
+
+<!-- leetcode start -->
+[![LeetCode](https://img.shields.io/badge/LeetCode-8%2F3845%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
+[![Easy](https://img.shields.io/badge/Easy-0%2F0-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-0%2F0-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-0%2F0-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
+<!-- leetcode end -->
+
+---
+
+## 🌐 Languages
+
+![Russian-Native](https://img.shields.io/badge/Russian-6B8DC3?style=for-the-badge&logoColor=white)![Native-555555](https://img.shields.io/badge/Native-555555?style=for-the-badge&logoColor=white)
+
+![English-C1](https://img.shields.io/badge/English-9B7BA8?style=for-the-badge&logoColor=white)![C1%20(IELTS%202023)-555555](https://img.shields.io/badge/C1%20(IELTS%202023)-555555?style=for-the-badge&logoColor=white)
+
+![Spanish-A2](https://img.shields.io/badge/Spanish-E8C547?style=for-the-badge&logoColor=black)![A2-555555](https://img.shields.io/badge/A2-555555?style=for-the-badge&logoColor=white)
 
 ---
 
