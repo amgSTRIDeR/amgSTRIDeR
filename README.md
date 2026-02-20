@@ -44,7 +44,7 @@ Software Engineer with 2+ years of frontend experience and a strong engineering 
 
 ## 🚀 Educational Projects
 
-All projects below are educational and focused on hands-on practice.
+Projects were developed in 2022-2023 independently without AI assistance during education in Rolling Scopes School. Recently published on GitHub with AI support for documentation. Current work involves closed-source enterprise applications (NDA-restricted).
 
 <table>
    <tr>
