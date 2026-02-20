@@ -17,68 +17,68 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#D4A085',
-  TypeScript: '#5B9FD8',
-  HTML: '#D4936F',
-  CSS: '#5BBE9B',
-  SCSS: '#B89BA8',
-  PHP: '#6C7BB5',
-  Shell: '#A8C89F',
-  Python: '#4B84C6',
-  Go: '#3BA9D8',
-  Rust: '#C9956F',
-  Java: '#C4956F',
-  C: '#8C8C8C',
-  'C++': '#D4948F',
-  Ruby: '#D4958F',
-  Swift: '#D4926F',
-  Kotlin: '#B8A8C8',
-  Dart: '#2D7CA8',
-  Vue: '#5BBE9B',
-  Svelte: '#D4988F',
-  Scala: '#D49A8F',
-  Lua: '#9BA8C8',
-  Perl: '#6B9BA8',
-  R: '#7BA8C8',
-  'Objective-C': '#7B9BC8',
-  CoffeeScript: '#6B9BA8',
-  Elixir: '#B8A0C8',
-  Haskell: '#A0A0B8'
+  JavaScript: '#E8B548',
+  TypeScript: '#3B7FB5',
+  HTML: '#E8754D',
+  CSS: '#4BD4A8',
+  SCSS: '#D473C8',
+  PHP: '#5B7FD4',
+  Shell: '#7FD47F',
+  Python: '#3B7FD4',
+  Go: '#2FB8E8',
+  Rust: '#D48548',
+  Java: '#D4725B',
+  C: '#A8A8A8',
+  'C++': '#E85B9F',
+  Ruby: '#E85B5B',
+  Swift: '#F68B5C',
+  Kotlin: '#A875D4',
+  Dart: '#1FA8D4',
+  Vue: '#4BD4A8',
+  Svelte: '#F1594C',
+  Scala: '#E85B5B',
+  Lua: '#7B7FE8',
+  Perl: '#5BA8D4',
+  R: '#5BA8E8',
+  'Objective-C': '#5BA8E8',
+  CoffeeScript: '#5BA8D4',
+  Elixir: '#A875D4',
+  Haskell: '#8B7FD4'
 }
 
 const trackedTechnologies = [
-  { name: 'Angular', color: '#D4948F', packages: ['@angular/core'] },
-  { name: 'React', color: '#7BB8D4', packages: ['react'] },
+  { name: 'Angular', color: '#E85B7F', packages: ['@angular/core'] },
+  { name: 'React', color: '#4BAFFF', packages: ['react'] },
   { name: 'Vue', color: '#5BBE9B', packages: ['vue'] },
   { name: 'Next.js', color: '#111111', packages: ['next'] },
-  { name: 'Nuxt', color: '#A8C89F', packages: ['nuxt'] },
-  { name: 'NestJS', color: '#D4948F', packages: ['@nestjs/core'] },
+  { name: 'Nuxt', color: '#4FD47F', packages: ['nuxt'] },
+  { name: 'NestJS', color: '#E85B7F', packages: ['@nestjs/core'] },
   { name: 'Express', color: '#888888', packages: ['express'] },
   { name: 'Fastify', color: '#242938', packages: ['fastify'] },
-  { name: 'RxJS', color: '#C8A8D4', packages: ['rxjs'] },
+  { name: 'RxJS', color: '#D464E8', packages: ['rxjs'] },
   { name: 'NgRx', color: '#8B5BA6', packages: ['@ngrx/store'] },
-  { name: 'Webpack', color: '#7BA8D4', packages: ['webpack'] },
-  { name: 'Vite', color: '#B8A8D4', packages: ['vite'] },
-  { name: 'Rollup', color: '#D4948F', packages: ['rollup'] },
-  { name: 'Babel', color: '#D4A085', packages: ['@babel/core'] },
-  { name: 'SCSS', color: '#B89BA8', packages: ['sass', 'node-sass'] },
+  { name: 'Webpack', color: '#4BAFFF', packages: ['webpack'] },
+  { name: 'Vite', color: '#A855FF', packages: ['vite'] },
+  { name: 'Rollup', color: '#FF6B5B', packages: ['rollup'] },
+  { name: 'Babel', color: '#E8B548', packages: ['@babel/core'] },
+  { name: 'SCSS', color: '#D464E8', packages: ['sass', 'node-sass'] },
   { name: 'TypeScript', color: '#5B9FD8', packages: ['typescript'] },
-  { name: 'GraphQL', color: '#D4A8B8', packages: ['graphql', '@apollo/client', '@apollo/server'] },
+  { name: 'GraphQL', color: '#FF5B9F', packages: ['graphql', '@apollo/client', '@apollo/server'] },
   { name: 'Prisma', color: '#2D3748', packages: ['prisma', '@prisma/client'] },
   { name: 'PostgreSQL', color: '#336791', packages: ['pg', 'postgres', 'typeorm', 'sequelize', 'knex'] },
   { name: 'MongoDB', color: '#47A248', packages: ['mongodb', 'mongoose'] },
-  { name: 'Redis', color: '#D4948F', packages: ['redis', 'ioredis'] },
-  { name: 'AWS', color: '#D4B887', packages: ['aws-sdk', '@aws-sdk/client-s3', '@aws-sdk/client-dynamodb', '@aws-sdk/client-lambda'] },
-  { name: 'Docker', color: '#7BB8D4', packages: ['dockerode'] },
-  { name: 'Kubernetes', color: '#6BB8C8', packages: ['@kubernetes/client-node'] },
+  { name: 'Redis', color: '#FF5548', packages: ['redis', 'ioredis'] },
+  { name: 'AWS', color: '#FFB840', packages: ['aws-sdk', '@aws-sdk/client-s3', '@aws-sdk/client-dynamodb', '@aws-sdk/client-lambda'] },
+  { name: 'Docker', color: '#4BAFFF', packages: ['dockerode'] },
+  { name: 'Kubernetes', color: '#4BD4D4', packages: ['@kubernetes/client-node'] },
   { name: 'Deno', color: '#6E6E6E', packages: ['@deno/shim-deno'] },
   { name: 'Jest', color: '#D94455', packages: ['jest'] },
-  { name: 'Playwright', color: '#A8C89F', packages: ['playwright', '@playwright/test'] },
-  { name: 'Cypress', color: '#9BC8A8', packages: ['cypress'] },
-  { name: 'Jasmine', color: '#B8A8D4', packages: ['jasmine-core', 'jasmine'] },
-  { name: 'Karma', color: '#A8C899', packages: ['karma'] },
+  { name: 'Playwright', color: '#4FD47F', packages: ['playwright', '@playwright/test'] },
+  { name: 'Cypress', color: '#5FD47F', packages: ['cypress'] },
+  { name: 'Jasmine', color: '#D464E8', packages: ['jasmine-core', 'jasmine'] },
+  { name: 'Karma', color: '#7FD47F', packages: ['karma'] },
   { name: 'ESLint', color: '#7E57C2', packages: ['eslint'] },
-  { name: 'Prettier', color: '#D4A085', packages: ['prettier'] }
+  { name: 'Prettier', color: '#FFB348', packages: ['prettier'] }
 ]
 
 async function getRepos() {
@@ -501,16 +501,9 @@ async function main() {
   const withStats = readme.replace(
     /<!-- stats start -->[\s\S]*?<!-- stats end -->/,
     `<!-- stats start -->
-<table>
-  <tr>
-    <td width="50%" valign="top">
-      <img src="stats.svg" alt="GitHub Stats and Language Stack" width="100%" />
-    </td>
-    <td width="50%" valign="top">
-      <img src="docs/thumbnails/technology-stack.svg" alt="Technology Stack from Dependencies" width="100%" />
-    </td>
-  </tr>
-</table>
+![GitHub Stats](stats.svg)
+
+![Technology Stack](docs/thumbnails/technology-stack.svg)
 <!-- stats end -->`
   )
 
