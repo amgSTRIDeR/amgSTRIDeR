@@ -17,77 +17,87 @@ const graphqlHeaders = {
 }
 
 const githubLanguageColors = {
-  JavaScript: '#F8E547',
+  JavaScript: '#D4A085',
   TypeScript: '#5B9FD8',
-  HTML: '#E8652A',
+  HTML: '#D4936F',
   CSS: '#5BBE9B',
-  SCSS: '#D689C9',
+  SCSS: '#B89BA8',
   PHP: '#6C7BB5',
-  Shell: '#8BC34A',
+  Shell: '#A8C89F',
   Python: '#4B84C6',
   Go: '#3BA9D8',
-  Rust: '#D89C6A',
-  Java: '#C57A3C',
+  Rust: '#C9956F',
+  Java: '#C4956F',
   C: '#8C8C8C',
-  'C++': '#E56B9B',
-  Ruby: '#B54A4A',
-  Swift: '#F26F4C',
-  Kotlin: '#9D7AD9',
-  Dart: '#3B8AC4',
+  'C++': '#D4948F',
+  Ruby: '#D4958F',
+  Swift: '#D4926F',
+  Kotlin: '#B8A8C8',
+  Dart: '#2D7CA8',
   Vue: '#5BBE9B',
-  Svelte: '#F2644C',
-  Scala: '#C85A6B',
-  Lua: '#5162B3',
-  Perl: '#4A8DB7',
-  R: '#5A92C8',
-  'Objective-C': '#6B9BE8',
-  CoffeeScript: '#4C9AE8',
-  Elixir: '#8B6AA8',
-  Haskell: '#7A6FA0',
-  Dockerfile: '#4B6A8C'
+  Svelte: '#D4988F',
+  Scala: '#D49A8F',
+  Lua: '#9BA8C8',
+  Perl: '#6B9BA8',
+  R: '#7BA8C8',
+  'Objective-C': '#7B9BC8',
+  CoffeeScript: '#6B9BA8',
+  Elixir: '#B8A0C8',
+  Haskell: '#A0A0B8',
+  Dockerfile: '#6B8BA8'
 }
 
 const trackedTechnologies = [
-  { name: 'Angular', color: '#E74C5C', packages: ['@angular/core'] },
-  { name: 'React', color: '#61DAFB', packages: ['react'] },
+  { name: 'Angular', color: '#D4948F', packages: ['@angular/core'] },
+  { name: 'React', color: '#7BB8D4', packages: ['react'] },
   { name: 'Vue', color: '#5BBE9B', packages: ['vue'] },
   { name: 'Next.js', color: '#111111', packages: ['next'] },
-  { name: 'Nuxt', color: '#00DC82', packages: ['nuxt'] },
-  { name: 'NestJS', color: '#E85B6F', packages: ['@nestjs/core'] },
+  { name: 'Nuxt', color: '#A8C89F', packages: ['nuxt'] },
+  { name: 'NestJS', color: '#D4948F', packages: ['@nestjs/core'] },
   { name: 'Express', color: '#888888', packages: ['express'] },
   { name: 'Fastify', color: '#242938', packages: ['fastify'] },
-  { name: 'RxJS', color: '#C8479B', packages: ['rxjs'] },
+  { name: 'RxJS', color: '#C8A8D4', packages: ['rxjs'] },
   { name: 'NgRx', color: '#8B5BA6', packages: ['@ngrx/store'] },
-  { name: 'Webpack', color: '#7BC2F6', packages: ['webpack'] },
-  { name: 'Vite', color: '#A779FF', packages: ['vite'] },
-  { name: 'Rollup', color: '#EC4A3F', packages: ['rollup'] },
-  { name: 'Babel', color: '#F8E547', packages: ['@babel/core'] },
-  { name: 'SCSS', color: '#D689C9', packages: ['sass', 'node-sass'] },
+  { name: 'Webpack', color: '#7BA8D4', packages: ['webpack'] },
+  { name: 'Vite', color: '#B8A8D4', packages: ['vite'] },
+  { name: 'Rollup', color: '#D4948F', packages: ['rollup'] },
+  { name: 'Babel', color: '#D4A085', packages: ['@babel/core'] },
+  { name: 'SCSS', color: '#B89BA8', packages: ['sass', 'node-sass'] },
   { name: 'TypeScript', color: '#5B9FD8', packages: ['typescript'] },
-  { name: 'GraphQL', color: '#E10098', packages: ['graphql', '@apollo/client', '@apollo/server'] },
+  { name: 'GraphQL', color: '#D4A8B8', packages: ['graphql', '@apollo/client', '@apollo/server'] },
   { name: 'Prisma', color: '#2D3748', packages: ['prisma', '@prisma/client'] },
   { name: 'PostgreSQL', color: '#336791', packages: ['pg', 'postgres', 'typeorm', 'sequelize', 'knex'] },
   { name: 'MongoDB', color: '#47A248', packages: ['mongodb', 'mongoose'] },
-  { name: 'Redis', color: '#DC382D', packages: ['redis', 'ioredis'] },
-  { name: 'AWS', color: '#FF9900', packages: ['aws-sdk', '@aws-sdk/client-s3', '@aws-sdk/client-dynamodb', '@aws-sdk/client-lambda'] },
-  { name: 'Docker', color: '#2496ED', packages: ['dockerode'] },
-  { name: 'Kubernetes', color: '#326CE5', packages: ['@kubernetes/client-node'] },
+  { name: 'Redis', color: '#D4948F', packages: ['redis', 'ioredis'] },
+  { name: 'AWS', color: '#D4B887', packages: ['aws-sdk', '@aws-sdk/client-s3', '@aws-sdk/client-dynamodb', '@aws-sdk/client-lambda'] },
+  { name: 'Docker', color: '#7BB8D4', packages: ['dockerode'] },
+  { name: 'Kubernetes', color: '#6BB8C8', packages: ['@kubernetes/client-node'] },
   { name: 'Deno', color: '#6E6E6E', packages: ['@deno/shim-deno'] },
   { name: 'Jest', color: '#D94455', packages: ['jest'] },
-  { name: 'Playwright', color: '#45C951', packages: ['playwright', '@playwright/test'] },
-  { name: 'Cypress', color: '#69D3A7', packages: ['cypress'] },
-  { name: 'Jasmine', color: '#9E5B96', packages: ['jasmine-core', 'jasmine'] },
-  { name: 'Karma', color: '#7BC241', packages: ['karma'] },
+  { name: 'Playwright', color: '#A8C89F', packages: ['playwright', '@playwright/test'] },
+  { name: 'Cypress', color: '#9BC8A8', packages: ['cypress'] },
+  { name: 'Jasmine', color: '#B8A8D4', packages: ['jasmine-core', 'jasmine'] },
+  { name: 'Karma', color: '#A8C899', packages: ['karma'] },
   { name: 'ESLint', color: '#7E57C2', packages: ['eslint'] },
-  { name: 'Prettier', color: '#F7B93E', packages: ['prettier'] }
+  { name: 'Prettier', color: '#D4A085', packages: ['prettier'] }
 ]
 
 async function getRepos() {
-  const res = await axios.get(
-    `https://api.github.com/users/${username}/repos?per_page=100`,
-    { headers }
-  )
-  return res.data
+  let allRepos = []
+  let page = 1
+  let hasMore = true
+
+  while (hasMore && page <= 3) {
+    const res = await axios.get(
+      `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`,
+      { headers }
+    )
+    allRepos = allRepos.concat(res.data)
+    hasMore = res.data.length === 100
+    page += 1
+  }
+
+  return allRepos
 }
 
 async function getLanguages(url) {

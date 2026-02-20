@@ -35,16 +35,9 @@ Software Engineer with 2+ years of frontend experience and a strong engineering 
 ---
 
 <!-- stats start -->
-<table>
-   <tr>
-      <td width="50%" valign="top">
-         <img src="stats.svg" alt="GitHub Stats and Language Stack" width="100%" />
-      </td>
-      <td width="50%" valign="top">
-         <img src="docs/thumbnails/technology-stack.svg" alt="Technology Stack from Dependencies" width="100%" />
-      </td>
-   </tr>
-</table>
+![GitHub Stats](stats.svg)
+
+![Technology Stack](docs/thumbnails/technology-stack.svg)
 <!-- stats end -->
 
 ---
