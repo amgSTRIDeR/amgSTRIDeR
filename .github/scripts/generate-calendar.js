@@ -150,6 +150,25 @@ function collectTechnologyUsage(techCounts, dependencySet) {
   })
 }
 
+function hexToRgb(hex) {
+  const normalized = (hex || '').replace('#', '').trim()
+  if (!/^[0-9a-fA-F]{6}$/.test(normalized)) return null
+
+  return {
+    r: parseInt(normalized.slice(0, 2), 16),
+    g: parseInt(normalized.slice(2, 4), 16),
+    b: parseInt(normalized.slice(4, 6), 16)
+  }
+}
+
+function getAdaptiveTextColor(hexColor) {
+  const rgb = hexToRgb(hexColor)
+  if (!rgb) return '#F2F4F6'
+
+  const luminance = (0.2126 * rgb.r + 0.7152 * rgb.g + 0.0722 * rgb.b) / 255
+  return luminance > 0.6 ? '#111111' : '#F2F4F6'
+}
+
 async function getContributions() {
   const query = {
     query: `
@@ -318,10 +337,10 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
 
     svg += `
       <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
-      <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#DCE3EA" stroke="#0d1117" stroke-opacity="0.55" stroke-width="0.7" paint-order="stroke" font-weight="700" letter-spacing="0.5">
+      <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         ${lang.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#DCE3EA" stroke="#0d1117" stroke-opacity="0.55" stroke-width="0.7" paint-order="stroke" font-weight="500">
+      <text x="${x3 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
         ${lang.percent.toFixed(1)}%
       </text>
     `
@@ -371,6 +390,7 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
   sorted.forEach((tech, index) => {
     const y = startY + index * rowHeight
     const color = tech.color || '#30363d'
+    const textColor = getAdaptiveTextColor(color)
     const ratio = tech.count / maxCount
     const barWidth = minBarWidth + (maxBarWidth - minBarWidth) * ratio
     const arrowTip = Math.max(18, Math.min(34, barWidth * 0.08))
@@ -382,10 +402,10 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
 
     bars += `
       <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
-      <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#DCE3EA" stroke="#0d1117" stroke-opacity="0.55" stroke-width="0.7" paint-order="stroke" font-weight="700" letter-spacing="0.4">
+      <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="${textColor}" font-weight="700" letter-spacing="0.4">
         ${tech.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#DCE3EA" stroke="#0d1117" stroke-opacity="0.55" stroke-width="0.7" paint-order="stroke" font-weight="600">
+      <text x="${x3 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="${textColor}" font-weight="600">
         ${tech.count} repos · ${((tech.count / analyzedReposCount) * 100).toFixed(1)}%
       </text>
     `
@@ -456,6 +476,9 @@ async function main() {
           <stop offset="0%" style="stop-color:#39d353;stop-opacity:0.6" />
           <stop offset="100%" style="stop-color:#39d353;stop-opacity:0.05" />
         </linearGradient>
+        <filter id="textSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="1" stdDeviation="0.8" flood-color="#000000" flood-opacity="0.45" />
+        </filter>
       </defs>
       
       <rect width="100%" height="100%" fill="#0d1117" />
