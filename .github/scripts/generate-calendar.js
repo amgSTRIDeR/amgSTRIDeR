@@ -314,18 +314,18 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const topY = y
     const bottomY = y + barHeight
     const midY = y + barHeight / 2
-    const arrowSize = 12
     const cornerRadius = 4
 
-    // Create smooth arrow bar with rounded tip
+    // Create smooth rounded rectangle bar
     const pathD = `
-      M ${x1},${topY}
-      L ${x2 - arrowSize},${topY}
-      Q ${x2 - arrowSize + cornerRadius},${topY} ${x2 - arrowSize + cornerRadius},${topY + cornerRadius}
-      L ${x2},${midY}
-      L ${x2 - arrowSize + cornerRadius},${bottomY - cornerRadius}
-      Q ${x2 - arrowSize + cornerRadius},${bottomY} ${x2 - arrowSize},${bottomY}
-      L ${x1},${bottomY}
+      M ${x1},${topY + cornerRadius}
+      Q ${x1},${topY} ${x1 + cornerRadius},${topY}
+      L ${x2 - cornerRadius},${topY}
+      Q ${x2},${topY} ${x2},${topY + cornerRadius}
+      L ${x2},${bottomY - cornerRadius}
+      Q ${x2},${bottomY} ${x2 - cornerRadius},${bottomY}
+      L ${x1 + cornerRadius},${bottomY}
+      Q ${x1},${bottomY} ${x1},${bottomY - cornerRadius}
       Z
     `
 
@@ -336,7 +336,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
       <defs>
         <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
-          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.15" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.25" />
           <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
         </linearGradient>
       </defs>
@@ -402,18 +402,18 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
     const topY = y
     const bottomY = y + barHeight
     const midY = y + barHeight / 2
-    const arrowSize = 12
     const cornerRadius = 4
 
-    // Create smooth arrow bar with rounded tip
+    // Create smooth rounded rectangle bar
     const pathD = `
-      M ${x1},${topY}
-      L ${x2 - arrowSize},${topY}
-      Q ${x2 - arrowSize + cornerRadius},${topY} ${x2 - arrowSize + cornerRadius},${topY + cornerRadius}
-      L ${x2},${midY}
-      L ${x2 - arrowSize + cornerRadius},${bottomY - cornerRadius}
-      Q ${x2 - arrowSize + cornerRadius},${bottomY} ${x2 - arrowSize},${bottomY}
-      L ${x1},${bottomY}
+      M ${x1},${topY + cornerRadius}
+      Q ${x1},${topY} ${x1 + cornerRadius},${topY}
+      L ${x2 - cornerRadius},${topY}
+      Q ${x2},${topY} ${x2},${topY + cornerRadius}
+      L ${x2},${bottomY - cornerRadius}
+      Q ${x2},${bottomY} ${x2 - cornerRadius},${bottomY}
+      L ${x1 + cornerRadius},${bottomY}
+      Q ${x1},${bottomY} ${x1},${bottomY - cornerRadius}
       Z
     `
 
@@ -424,7 +424,7 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
       <defs>
         <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
           <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
-          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.15" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.25" />
           <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
         </linearGradient>
       </defs>
