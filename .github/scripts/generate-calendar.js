@@ -318,10 +318,10 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
 
     svg += `
       <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
-      <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#AAAAAA" font-weight="700" letter-spacing="0.5">
+      <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" stroke="#0d1117" stroke-width="1.1" paint-order="stroke" font-weight="700" letter-spacing="0.5">
         ${lang.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#AAAAAA" font-weight="500">
+      <text x="${x3 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" stroke="#0d1117" stroke-width="1.1" paint-order="stroke" font-weight="500">
         ${lang.percent.toFixed(1)}%
       </text>
     `
@@ -382,10 +382,10 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
 
     bars += `
       <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
-      <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#AAAAAA" font-weight="700" letter-spacing="0.4">
+      <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" stroke="#0d1117" stroke-width="1.1" paint-order="stroke" font-weight="700" letter-spacing="0.4">
         ${tech.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#AAAAAA" font-weight="600">
+      <text x="${x3 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" stroke="#0d1117" stroke-width="1.1" paint-order="stroke" font-weight="600">
         ${tech.count} repos · ${((tech.count / analyzedReposCount) * 100).toFixed(1)}%
       </text>
     `
@@ -489,7 +489,7 @@ async function main() {
     </svg>
   `
 
-  await fs.writeFile('stats.svg', svgContent)
+  await fs.writeFile('docs/stats.svg', svgContent)
   const technologyStackSvg = generateTechnologyStackSvg(
     dependencyTechTotals,
     analyzedDependencyRepos
@@ -501,7 +501,7 @@ async function main() {
   const withStats = readme.replace(
     /<!-- stats start -->[\s\S]*?<!-- stats end -->/,
     `<!-- stats start -->
-![GitHub Stats](stats.svg)
+  ![GitHub Stats](docs/stats.svg)
 
 ![Technology Stack](docs/thumbnails/technology-stack.svg)
 <!-- stats end -->`
