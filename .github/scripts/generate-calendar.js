@@ -309,19 +309,29 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const color = githubLanguageColors[lang.name] || '#30363d'
     const ratio = lang.percent / maxPercent
     const barWidth = minBarWidth + (maxBarWidth - minBarWidth) * ratio
-    const arrowTip = Math.max(18, Math.min(34, barWidth * 0.08))
     const x1 = startX
-    const x2 = startX + barWidth - arrowTip
-    const x3 = startX + barWidth
-    const midY = y + barHeight / 2
+    const x2 = startX + barWidth
+    const topY = y
     const bottomY = y + barHeight
+    const midY = y + barHeight / 2
+    const roundRadius = 6
+
+    // Create rounded arrow bar using path
+    const pathD = `
+      M ${x1} ${topY}
+      L ${x2 - roundRadius} ${topY}
+      Q ${x2} ${topY} ${x2} ${midY}
+      Q ${x2} ${bottomY} ${x2 - roundRadius} ${bottomY}
+      L ${x1} ${bottomY}
+      Z
+    `
 
     svg += `
-      <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
+      <path d="${pathD}" fill="${color}" filter="url(#barShadow)" />
       <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         ${lang.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+      <text x="${x2 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
         ${lang.percent.toFixed(1)}%
       </text>
     `
@@ -373,19 +383,29 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
     const color = tech.color || '#30363d'
     const ratio = tech.count / maxCount
     const barWidth = minBarWidth + (maxBarWidth - minBarWidth) * ratio
-    const arrowTip = Math.max(18, Math.min(34, barWidth * 0.08))
     const x1 = startX
-    const x2 = startX + barWidth - arrowTip
-    const x3 = startX + barWidth
-    const midY = y + barHeight / 2
+    const x2 = startX + barWidth
+    const topY = y
     const bottomY = y + barHeight
+    const midY = y + barHeight / 2
+    const roundRadius = 6
+
+    // Create rounded arrow bar using path
+    const pathD = `
+      M ${x1} ${topY}
+      L ${x2 - roundRadius} ${topY}
+      Q ${x2} ${topY} ${x2} ${midY}
+      Q ${x2} ${bottomY} ${x2 - roundRadius} ${bottomY}
+      L ${x1} ${bottomY}
+      Z
+    `
 
     bars += `
-      <polygon points="${x1},${y} ${x2},${y} ${x3},${midY} ${x2},${bottomY} ${x1},${bottomY}" fill="${color}" />
+      <path d="${pathD}" fill="${color}" filter="url(#barShadow)" />
       <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         ${tech.name.toUpperCase()}
       </text>
-      <text x="${x3 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+      <text x="${x2 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
         ${tech.count} repos · ${((tech.count / analyzedReposCount) * 100).toFixed(1)}%
       </text>
     `
@@ -395,6 +415,16 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
     <svg xmlns="http://www.w3.org/2000/svg" width="${cardWidth}" height="${height}" viewBox="0 0 ${cardWidth} ${height}" role="img" aria-labelledby="title desc">
       <title id="title">Technology Stack</title>
       <desc id="desc">Technology stack based on package dependencies.</desc>
+
+      <defs>
+        <filter id="textSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+        <filter id="barShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
+        </filter>
+      </defs>
+
       <rect width="100%" height="100%" fill="#0d1117" rx="14" />
       <rect x="1" y="1" width="${cardWidth - 2}" height="${height - 2}" fill="none" stroke="#30363d" rx="14" />
 
@@ -450,7 +480,7 @@ async function main() {
          width="${cardWidth}"
          height="${totalHeight}"
          viewBox="0 0 ${cardWidth} ${totalHeight}">
-      
+       
       <defs>
         <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
           <stop offset="0%" style="stop-color:#39d353;stop-opacity:0.6" />
@@ -458,6 +488,9 @@ async function main() {
         </linearGradient>
         <filter id="textSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000000" flood-opacity="0.6" />
+        </filter>
+        <filter id="barShadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
         </filter>
       </defs>
       
