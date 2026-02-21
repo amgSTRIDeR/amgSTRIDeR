@@ -314,20 +314,34 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const topY = y
     const bottomY = y + barHeight
     const midY = y + barHeight / 2
-    const roundRadius = 6
+    const arrowSize = 12
+    const cornerRadius = 4
 
-    // Create rounded arrow bar using path
+    // Create smooth arrow bar with rounded tip
     const pathD = `
-      M ${x1} ${topY}
-      L ${x2 - roundRadius} ${topY}
-      Q ${x2} ${topY} ${x2} ${midY}
-      Q ${x2} ${bottomY} ${x2 - roundRadius} ${bottomY}
-      L ${x1} ${bottomY}
+      M ${x1},${topY}
+      L ${x2 - arrowSize},${topY}
+      Q ${x2 - arrowSize + cornerRadius},${topY} ${x2 - arrowSize + cornerRadius},${topY + cornerRadius}
+      L ${x2},${midY}
+      L ${x2 - arrowSize + cornerRadius},${bottomY - cornerRadius}
+      Q ${x2 - arrowSize + cornerRadius},${bottomY} ${x2 - arrowSize},${bottomY}
+      L ${x1},${bottomY}
       Z
     `
 
+    // Gradient ID for inner glow effect
+    const gradId = `langGrad${index}`
+
     svg += `
-      <path d="${pathD}" fill="${color}" filter="url(#barShadow)" />
+      <defs>
+        <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.15" />
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      <path d="${pathD}" fill="${color}" />
+      <path d="${pathD}" fill="url(#${gradId})" />
       <text x="${startX + 16}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         ${lang.name.toUpperCase()}
       </text>
@@ -388,20 +402,34 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
     const topY = y
     const bottomY = y + barHeight
     const midY = y + barHeight / 2
-    const roundRadius = 6
+    const arrowSize = 12
+    const cornerRadius = 4
 
-    // Create rounded arrow bar using path
+    // Create smooth arrow bar with rounded tip
     const pathD = `
-      M ${x1} ${topY}
-      L ${x2 - roundRadius} ${topY}
-      Q ${x2} ${topY} ${x2} ${midY}
-      Q ${x2} ${bottomY} ${x2 - roundRadius} ${bottomY}
-      L ${x1} ${bottomY}
+      M ${x1},${topY}
+      L ${x2 - arrowSize},${topY}
+      Q ${x2 - arrowSize + cornerRadius},${topY} ${x2 - arrowSize + cornerRadius},${topY + cornerRadius}
+      L ${x2},${midY}
+      L ${x2 - arrowSize + cornerRadius},${bottomY - cornerRadius}
+      Q ${x2 - arrowSize + cornerRadius},${bottomY} ${x2 - arrowSize},${bottomY}
+      L ${x1},${bottomY}
       Z
     `
 
+    // Gradient ID for inner glow effect
+    const gradId = `techGrad${index}`
+
     bars += `
-      <path d="${pathD}" fill="${color}" filter="url(#barShadow)" />
+      <defs>
+        <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.15" />
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      <path d="${pathD}" fill="${color}" />
+      <path d="${pathD}" fill="url(#${gradId})" />
       <text x="${startX + 16}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         ${tech.name.toUpperCase()}
       </text>
@@ -419,9 +447,6 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
       <defs>
         <filter id="textSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000000" flood-opacity="0.6" />
-        </filter>
-        <filter id="barShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
         </filter>
       </defs>
 
@@ -488,9 +513,6 @@ async function main() {
         </linearGradient>
         <filter id="textSoftShadow" x="-20%" y="-20%" width="140%" height="140%">
           <feDropShadow dx="0" dy="1.2" stdDeviation="1.1" flood-color="#000000" flood-opacity="0.6" />
-        </filter>
-        <filter id="barShadow" x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000000" flood-opacity="0.3" />
         </filter>
       </defs>
       
