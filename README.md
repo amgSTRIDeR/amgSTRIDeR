@@ -116,8 +116,8 @@ Projects were developed in 2022-2023 independently without AI assistance during 
 [![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
 
 <!-- leetcode start -->
-[![LeetCode](https://img.shields.io/badge/LeetCode-21%2F3846%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
-[![Easy](https://img.shields.io/badge/Easy-13%2F927-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-8%2F2010-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-0%2F909-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
+[![LeetCode](https://img.shields.io/badge/LeetCode-21%2F3850%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
+[![Easy](https://img.shields.io/badge/Easy-13%2F927-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-8%2F2013-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-0%2F910-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
 <!-- leetcode end -->
 
 ---
