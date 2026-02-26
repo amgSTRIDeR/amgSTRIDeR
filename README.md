@@ -120,7 +120,7 @@ Projects were developed in 2022-2023 independently without AI assistance during 
 [![Easy](https://img.shields.io/badge/Easy-23%2F927-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-12%2F2014-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-1%2F910-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
 <!-- leetcode end -->
 
-![LeetCode Badges](https://leetcode-badge-showcase.vercel.app/api?username=amgSTRIDeR&animated=true&theme=dark)
+![LeetCode Badges](https://leetcode-badge-showcase.vercel.app/api?username=us_0108&animated=true&theme=dark)
 
 ---
 
