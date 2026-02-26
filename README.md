@@ -35,7 +35,7 @@ Software Engineer with 2+ years of frontend experience and a strong engineering 
 ---
 
 <!-- stats start -->
-![GitHub Stats](docs/stats.svg)
+  ![GitHub Stats](docs/stats.svg)
 
 ![Technology Stack](docs/thumbnails/technology-stack.svg)
 <!-- stats end -->
@@ -116,8 +116,8 @@ Projects were developed in 2022-2023 independently without AI assistance during 
 [![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
 
 <!-- leetcode start -->
-[![LeetCode](https://img.shields.io/badge/LeetCode-8%2F3845%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
-[![Easy](https://img.shields.io/badge/Easy-0%2F0-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-0%2F0-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-0%2F0-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
+[![LeetCode](https://img.shields.io/badge/LeetCode-36%2F3851%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
+[![Easy](https://img.shields.io/badge/Easy-23%2F927-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-12%2F2014-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-1%2F910-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
 <!-- leetcode end -->
 
 ![LeetCode Badges](https://leetcode-badge-showcase.vercel.app/api?username=amgSTRIDeR&animated=true&theme=dark)
