@@ -326,19 +326,19 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const cornerRadius = 4
 
     // Create smooth rounded rectangle bar
-    const pathD = `
-      M ${x1},${topY + cornerRadius}
-      Q ${x1},${topY} ${x1 + cornerRadius},${topY}
-      L ${x2 - cornerRadius},${topY}
-      Q ${x2},${topY} ${x2},${topY + cornerRadius}
-      L ${x2},${bottomY - cornerRadius}
-      Q ${x2},${bottomY} ${x2 - cornerRadius},${bottomY}
-      L ${x1 + cornerRadius},${bottomY}
-      Q ${x1},${bottomY} ${x1},${bottomY - cornerRadius}
-      Z
-    `
-
-    // Gradient ID for inner glow effect
+    // Dynamic intervals for Y axis labels with equal spacing
+    let yLabels = ''
+    const thresholds = [1, 5, 8, 15, 30]
+    if (maxContributions > thresholds[thresholds.length - 1]) {
+      thresholds.push(maxContributions)
+    }
+    const ySteps = thresholds.filter(t => t <= maxContributions)
+    const N = ySteps.length;
+    ySteps.forEach((value, idx) => {
+      // Equal spacing for Y axis
+      const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+      yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`;
+    });
     const gradId = `langGrad${index}`
 
     svg += `
