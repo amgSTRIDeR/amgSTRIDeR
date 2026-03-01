@@ -220,11 +220,15 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   }
   
   let yLabels = ''
-  for (let i = 0; i <= 7; i++) {
-    const y = startY + (graphHeight / 7) * (7 - i)
-    const value = Math.round((maxContributions / 7) * i)
-    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`
+  const thresholds = [1, 5, 8, 15, 30]
+  if (maxContributions > thresholds[thresholds.length - 1]) {
+    thresholds.push(maxContributions)
   }
+  const ySteps = thresholds.filter(t => t <= maxContributions)
+  ySteps.forEach((value, idx) => {
+    const y = startY + graphHeight - (value / maxContributions) * graphHeight
+    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`
+  })
   
   let xLabels = ''
   const labelIndices = [0, Math.floor(displayDays.length / 2), displayDays.length - 1]
@@ -239,11 +243,16 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   displayDays.forEach((count, i) => {
     const x = startX + i * stepX
     const y = startY + graphHeight - (count / maxContributions) * graphHeight
+    let fill = '#30363d', r = 2.5, opacity = 0.5, stroke = 'none', strokeWidth = 0
     if (count > 0) {
-      circles += `<circle cx="${x}" cy="${y}" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" />`
-    } else {
-      circles += `<circle cx="${x}" cy="${y}" r="2.5" fill="#30363d" opacity="0.5" />`
+      if (count < 5) fill = '#39d353'
+      else if (count < 8) fill = '#28a745'
+      else if (count < 15) fill = '#2188ff'
+      else if (count < 30) fill = '#b392f0'
+      else fill = '#ff7b72'
+      r = 3.5; opacity = 1; stroke = '#0d1117'; strokeWidth = 2
     }
+    circles += `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" opacity="${opacity}" />`
   })
   
   let svg = `
