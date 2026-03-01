@@ -326,7 +326,18 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const cornerRadius = 4
 
     // Create smooth rounded rectangle bar
-    const gradId = `langGrad${index}`
+    const pathD = `
+      M ${x1},${topY + cornerRadius}
+      Q ${x1},${topY} ${x1 + cornerRadius},${topY}
+      L ${x2 - cornerRadius},${topY}
+      Q ${x2},${topY} ${x2},${topY + cornerRadius}
+      L ${x2},${bottomY - cornerRadius}
+      Q ${x2},${bottomY} ${x2 - cornerRadius},${bottomY}
+      L ${x1 + cornerRadius},${bottomY}
+      Q ${x1},${bottomY} ${x1},${bottomY - cornerRadius}
+      Z
+    `;
+    const gradId = `langGrad${index}`;
 
     svg += `
       <defs>
@@ -344,7 +355,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
       <text x="${x2 + 14}" y="${y + 21}" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
         ${lang.percent.toFixed(1)}%
       </text>
-    `
+    `;
   })
   
   return {
