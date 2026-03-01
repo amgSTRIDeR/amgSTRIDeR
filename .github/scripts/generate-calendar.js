@@ -196,17 +196,35 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   
   const stepX = graphWidth / (displayDays.length - 1)
   
-  let points = ''
-  let areaPoints = `${startX},${startY + graphHeight} `
-  
+  // Custom intervals: 1,2,3,4,5,6-10,11-15,16-20,21-30,31+
+  const thresholds = [1,2,3,4,5,10,15,20,30];
+  let ySteps = [];
+  for (let i = 0; i < thresholds.length - 1; i++) {
+    ySteps.push(thresholds[i]);
+  }
+  // Add last interval as maxContributions if больше 30
+  if (maxContributions > 30) {
+    ySteps.push(maxContributions);
+  } else {
+    ySteps.push(30);
+  }
+  const N = ySteps.length;
+
+  let points = '';
+  let areaPoints = `${startX},${startY + graphHeight} `;
   displayDays.forEach((count, i) => {
-    const x = startX + i * stepX
-    const y = startY + graphHeight - (count / maxContributions) * graphHeight
-    points += `${x},${y} `
-    areaPoints += `${x},${y} `
-  })
-  
-  areaPoints += `${startX + (displayDays.length - 1) * stepX},${startY + graphHeight}`
+    const x = startX + i * stepX;
+    // Find the interval index for the point
+    let idx = 0;
+    for (let t = 0; t < N; t++) {
+      if (count >= ySteps[t]) idx = t;
+      else break;
+    }
+    const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    points += `${x},${y} `;
+    areaPoints += `${x},${y} `;
+  });
+  areaPoints += `${startX + (displayDays.length - 1) * stepX},${startY + graphHeight}`;
   
   let gridLines = ''
   for (let i = 0; i <= 7; i++) {
@@ -221,18 +239,6 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   
   // Custom intervals: 1,2,3,4,5,6-10,11-15,16-20,21-30,31+
   let yLabels = '';
-  const thresholds = [1,2,3,4,5,10,15,20,30];
-  let ySteps = [];
-  for (let i = 0; i < thresholds.length - 1; i++) {
-    ySteps.push(thresholds[i]);
-  }
-  // Add last interval as maxContributions if больше 30
-  if (maxContributions > 30) {
-    ySteps.push(maxContributions);
-  } else {
-    ySteps.push(30);
-  }
-  const N = ySteps.length;
   ySteps.forEach((value, idx) => {
     // Equal spacing for Y axis
     const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
