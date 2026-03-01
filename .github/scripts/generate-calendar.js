@@ -326,19 +326,6 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const cornerRadius = 4
 
     // Create smooth rounded rectangle bar
-    // Dynamic intervals for Y axis labels with equal spacing
-    let yLabels = ''
-    const thresholds = [1, 5, 8, 15, 30]
-    if (maxContributions > thresholds[thresholds.length - 1]) {
-      thresholds.push(maxContributions)
-    }
-    const ySteps = thresholds.filter(t => t <= maxContributions)
-    const N = ySteps.length;
-    ySteps.forEach((value, idx) => {
-      // Equal spacing for Y axis
-      const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
-      yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`;
-    });
     const gradId = `langGrad${index}`
 
     svg += `
