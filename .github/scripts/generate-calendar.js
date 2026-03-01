@@ -219,16 +219,31 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
     gridLines += `<line x1="${x}" y1="${startY}" x2="${x}" y2="${startY + graphHeight}" stroke="#30363d" stroke-width="1" opacity="0.2" />`
   }
   
-  let yLabels = ''
-  const thresholds = [1, 5, 8, 15, 30]
-  if (maxContributions > thresholds[thresholds.length - 1]) {
-    thresholds.push(maxContributions)
+  // Custom intervals: 1,2,3,4,5,6-10,11-15,16-20,21-30,31+
+  let yLabels = '';
+  const thresholds = [1,2,3,4,5,10,15,20,30];
+  let ySteps = [];
+  for (let i = 0; i < thresholds.length - 1; i++) {
+    ySteps.push(thresholds[i]);
   }
-  const ySteps = thresholds.filter(t => t <= maxContributions)
+  // Add last interval as maxContributions if больше 30
+  if (maxContributions > 30) {
+    ySteps.push(maxContributions);
+  } else {
+    ySteps.push(30);
+  }
+  const N = ySteps.length;
   ySteps.forEach((value, idx) => {
-    const y = startY + graphHeight - (value / maxContributions) * graphHeight
-    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${value}</text>`
-  })
+    // Equal spacing for Y axis
+    const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    let label = value;
+    if (idx === 5) label = '6–10';
+    else if (idx === 6) label = '11–15';
+    else if (idx === 7) label = '16–20';
+    else if (idx === 8) label = '21–30';
+    else if (idx === 9) label = (maxContributions > 30 ? `${ySteps[N-2]+1}+` : '30');
+    yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${label}</text>`;
+  });
   
   let xLabels = ''
   const labelIndices = [0, Math.floor(displayDays.length / 2), displayDays.length - 1]
@@ -239,21 +254,33 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   })
   
 
-  let circles = ''
+  let circles = '';
   displayDays.forEach((count, i) => {
-    const x = startX + i * stepX
-    const y = startY + graphHeight - (count / maxContributions) * graphHeight
-    let fill = '#30363d', r = 2.5, opacity = 0.5, stroke = 'none', strokeWidth = 0
-    if (count > 0) {
-      if (count < 5) fill = '#39d353'
-      else if (count < 8) fill = '#28a745'
-      else if (count < 15) fill = '#2188ff'
-      else if (count < 30) fill = '#b392f0'
-      else fill = '#ff7b72'
-      r = 3.5; opacity = 1; stroke = '#0d1117'; strokeWidth = 2
+    const x = startX + i * stepX;
+    // Find the interval index
+    let idx = 0;
+    for (let t = 0; t < N; t++) {
+      if (count >= ySteps[t]) idx = t;
+      else break;
     }
-    circles += `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" opacity="${opacity}" />`
-  })
+    const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    let fill = '#30363d', r = 2.5, opacity = 0.5, stroke = 'none', strokeWidth = 0;
+    if (count > 0) {
+      // Color by interval
+      if (idx === 0) fill = '#39d353'; // 1
+      else if (idx === 1) fill = '#28a745'; // 2
+      else if (idx === 2) fill = '#2188ff'; // 3
+      else if (idx === 3) fill = '#b392f0'; // 4
+      else if (idx === 4) fill = '#ff7b72'; // 5
+      else if (idx === 5) fill = '#ffb347'; // 6-10
+      else if (idx === 6) fill = '#ff69b4'; // 11-15
+      else if (idx === 7) fill = '#00bfff'; // 16-20
+      else if (idx === 8) fill = '#8a2be2'; // 21-30
+      else fill = '#d2691e'; // 31+
+      r = 3.5; opacity = 1; stroke = '#0d1117'; strokeWidth = 2;
+    }
+    circles += `<circle cx="${x}" cy="${y}" r="${r}" fill="${fill}" stroke="${stroke}" stroke-width="${strokeWidth}" opacity="${opacity}" />`;
+  });
   
   let svg = `
     ${gridLines}
