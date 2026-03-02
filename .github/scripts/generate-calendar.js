@@ -196,8 +196,7 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   
   const stepX = graphWidth / (displayDays.length - 1)
   
-  // Custom intervals: 1,2,3,4,5,6-10,11-15,16-20,21-30,31+
-  const thresholds = [1,2,3,4,5,10,15,20,30];
+  const thresholds = [0,1,2,3,4,5,10,15,20,30];
   let ySteps = [];
   for (let i = 0; i < thresholds.length - 1; i++) {
     ySteps.push(thresholds[i]);
@@ -227,9 +226,9 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   areaPoints += `${startX + (displayDays.length - 1) * stepX},${startY + graphHeight}`;
   
   let gridLines = ''
-  for (let i = 0; i <= 7; i++) {
-    const y = startY + (graphHeight / 7) * i
-    gridLines += `<line x1="${startX}" y1="${y}" x2="${startX + graphWidth}" y2="${y}" stroke="#30363d" stroke-width="1" opacity="0.3" />`
+  for (let i = 0; i < N; i++) {
+    const y = startY + graphHeight - (i / (N - 1)) * graphHeight;
+    gridLines += `<line x1="${startX}" y1="${y}" x2="${startX + graphWidth}" y2="${y}" stroke="#30363d" stroke-width="1" opacity="0.3" />`;
   }
   
   for (let i = 0; i < displayDays.length; i += 5) {
@@ -243,11 +242,16 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
     // Equal spacing for Y axis
     const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
     let label = value;
-    if (idx === 5) label = '6–10';
-    else if (idx === 6) label = '11–15';
-    else if (idx === 7) label = '16–20';
-    else if (idx === 8) label = '21–30';
-    else if (idx === 9) label = (maxContributions > 30 ? `${ySteps[N-2]+1}+` : '30');
+    if (idx === 1) label = '1';
+    else if (idx === 2) label = '2';
+    else if (idx === 3) label = '3';
+    else if (idx === 4) label = '4';
+    else if (idx === 5) label = '5';
+    else if (idx === 6) label = '6–10';
+    else if (idx === 7) label = '11–15';
+    else if (idx === 8) label = '16–20';
+    else if (idx === 9) label = '21–30';
+    else if (idx === 10) label = (maxContributions > 30 ? `${ySteps[N-2]+1}+` : '30');
     yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${label}</text>`;
   });
   
