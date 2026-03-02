@@ -196,12 +196,8 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   
   const stepX = graphWidth / (displayDays.length - 1)
   
-  const thresholds = [0,1,2,3,4,5,10,15,20,30];
-  let ySteps = [];
-  for (let i = 0; i < thresholds.length - 1; i++) {
-    ySteps.push(thresholds[i]);
-  }
-  // Add last interval as maxContributions if больше 30
+  // Ось Y: 0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-30,31+
+  let ySteps = [0,1,2,3,4,5,6,7,8,9,10,15,20,30];
   if (maxContributions > 30) {
     ySteps.push(maxContributions);
   } else {
@@ -213,13 +209,18 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   let areaPoints = `${startX},${startY + graphHeight} `;
   displayDays.forEach((count, i) => {
     const x = startX + i * stepX;
-    // Find the interval index for the point
     let idx = 0;
     for (let t = 0; t < N; t++) {
       if (count >= ySteps[t]) idx = t;
       else break;
     }
-    const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    let y;
+    if (idx < N - 1 && ySteps[idx + 1] !== ySteps[idx]) {
+      const frac = (count - ySteps[idx]) / (ySteps[idx + 1] - ySteps[idx]);
+      y = startY + graphHeight - ((idx + frac) / (N - 1)) * graphHeight;
+    } else {
+      y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    }
     points += `${x},${y} `;
     areaPoints += `${x},${y} `;
   });
@@ -239,19 +240,12 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   // Custom intervals: 1,2,3,4,5,6-10,11-15,16-20,21-30,31+
   let yLabels = '';
   ySteps.forEach((value, idx) => {
-    // Equal spacing for Y axis
     const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
     let label = value;
-    if (idx === 1) label = '1';
-    else if (idx === 2) label = '2';
-    else if (idx === 3) label = '3';
-    else if (idx === 4) label = '4';
-    else if (idx === 5) label = '5';
-    else if (idx === 6) label = '6–10';
-    else if (idx === 7) label = '11–15';
-    else if (idx === 8) label = '16–20';
-    else if (idx === 9) label = '21–30';
-    else if (idx === 10) label = (maxContributions > 30 ? `${ySteps[N-2]+1}+` : '30');
+    if (idx >= 11 && idx < 12) label = '11–15';
+    else if (idx >= 12 && idx < 13) label = '16–20';
+    else if (idx >= 13 && idx < 14) label = '21–30';
+    else if (idx === 14) label = (maxContributions > 30 ? `${ySteps[N-2]+1}+` : '30');
     yLabels += `<text x="${startX - 10}" y="${y + 4}" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">${label}</text>`;
   });
   
@@ -267,25 +261,30 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   let circles = '';
   displayDays.forEach((count, i) => {
     const x = startX + i * stepX;
-    // Find the interval index
     let idx = 0;
     for (let t = 0; t < N; t++) {
       if (count >= ySteps[t]) idx = t;
       else break;
     }
-    const y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    let y;
+    if (idx < N - 1 && ySteps[idx + 1] !== ySteps[idx]) {
+      const frac = (count - ySteps[idx]) / (ySteps[idx + 1] - ySteps[idx]);
+      y = startY + graphHeight - ((idx + frac) / (N - 1)) * graphHeight;
+    } else {
+      y = startY + graphHeight - (idx / (N - 1)) * graphHeight;
+    }
     let fill = '#30363d', r = 2.5, opacity = 0.5, stroke = 'none', strokeWidth = 0;
     if (count > 0) {
-      // Color by interval
-      if (idx === 0) fill = '#39d353'; // 1
-      else if (idx === 1) fill = '#28a745'; // 2
-      else if (idx === 2) fill = '#2188ff'; // 3
-      else if (idx === 3) fill = '#b392f0'; // 4
-      else if (idx === 4) fill = '#ff7b72'; // 5
-      else if (idx === 5) fill = '#ffb347'; // 6-10
-      else if (idx === 6) fill = '#ff69b4'; // 11-15
-      else if (idx === 7) fill = '#00bfff'; // 16-20
-      else if (idx === 8) fill = '#8a2be2'; // 21-30
+      if (idx === 0) fill = '#30363d'; // 0
+      else if (idx === 1) fill = '#39d353'; // 1
+      else if (idx === 2) fill = '#28a745'; // 2
+      else if (idx === 3) fill = '#2188ff'; // 3
+      else if (idx === 4) fill = '#b392f0'; // 4
+      else if (idx === 5) fill = '#ff7b72'; // 5
+      else if (idx >= 6 && idx <= 10) fill = '#ffb347'; // 6-10
+      else if (idx === 11) fill = '#ff69b4'; // 11-15
+      else if (idx === 12) fill = '#00bfff'; // 16-20
+      else if (idx === 13) fill = '#8a2be2'; // 21-30
       else fill = '#d2691e'; // 31+
       r = 3.5; opacity = 1; stroke = '#0d1117'; strokeWidth = 2;
     }
