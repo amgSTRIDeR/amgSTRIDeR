@@ -11,11 +11,6 @@ const headers = {
   Accept: 'application/vnd.github+json'
 }
 
-const graphqlHeaders = {
-  Authorization: `Bearer ${token}`,
-  'Content-Type': 'application/json'
-}
-
 const githubLanguageColors = {
   JavaScript: '#FFE844',
   TypeScript: '#3B7FB5',
@@ -86,9 +81,9 @@ async function getRepos() {
   let page = 1
   let hasMore = true
 
-  while (hasMore && page <= 3) {
+  while (hasMore) {
     const res = await axios.get(
-      `https://api.github.com/users/${username}/repos?per_page=100&page=${page}`,
+      `https://api.github.com/user/repos?per_page=100&page=${page}&visibility=all&affiliation=owner,collaborator,organization_member`,
       { headers }
     )
     allRepos = allRepos.concat(res.data)
@@ -151,31 +146,91 @@ function collectTechnologyUsage(techCounts, dependencySet) {
 }
 
 async function getContributions() {
-  const query = {
-    query: `
-      query {
-        user(login: "${username}") {
-          contributionsCollection {
-            contributionCalendar {
-              weeks {
-                contributionDays {
-                  contributionCount
-                }
-              }
-            }
-          }
-        }
-      }
-    `
+  const totalDays = 35
+  const dayCounts = {}
+  const now = new Date()
+  const startDate = new Date(now)
+  startDate.setUTCDate(startDate.getUTCDate() - (totalDays - 1))
+  startDate.setUTCHours(0, 0, 0, 0)
+  const sinceIso = startDate.toISOString()
+
+  for (let i = 0; i < totalDays; i += 1) {
+    const day = new Date(startDate)
+    day.setUTCDate(startDate.getUTCDate() + i)
+    dayCounts[day.toISOString().slice(0, 10)] = 0
   }
 
-  const res = await axios.post(
-    'https://api.github.com/graphql',
-    query,
-    { headers: graphqlHeaders }
-  )
+  const repos = await getRepos()
 
-  return res.data.data.user.contributionsCollection.contributionCalendar.weeks
+  for (const repo of repos) {
+    let branches = []
+    let branchPage = 1
+    let hasMoreBranches = true
+
+    while (hasMoreBranches) {
+      try {
+        const branchRes = await axios.get(
+          `https://api.github.com/repos/${repo.full_name}/branches?per_page=100&page=${branchPage}`,
+          { headers }
+        )
+
+        branches = branches.concat(branchRes.data)
+        hasMoreBranches = branchRes.data.length === 100
+        branchPage += 1
+      } catch (error) {
+        // Skip repos that cannot expose branches (archived/empty/inaccessible)
+        branches = []
+        hasMoreBranches = false
+      }
+    }
+
+    const seenCommitShas = new Set()
+
+    for (const branch of branches) {
+      let commitPage = 1
+      let hasMoreCommits = true
+
+      while (hasMoreCommits) {
+        try {
+          const commitRes = await axios.get(
+            `https://api.github.com/repos/${repo.full_name}/commits?sha=${encodeURIComponent(branch.name)}&author=${encodeURIComponent(username)}&since=${encodeURIComponent(sinceIso)}&per_page=100&page=${commitPage}`,
+            { headers }
+          )
+
+          const commits = commitRes.data
+          hasMoreCommits = commits.length === 100
+          commitPage += 1
+
+          commits.forEach((commit) => {
+            const sha = commit?.sha
+            if (!sha || seenCommitShas.has(sha)) return
+            seenCommitShas.add(sha)
+
+            const authoredAt = commit?.commit?.author?.date || commit?.commit?.committer?.date
+            if (!authoredAt) return
+
+            const dayKey = new Date(authoredAt).toISOString().slice(0, 10)
+            if (dayCounts[dayKey] !== undefined) {
+              dayCounts[dayKey] += 1
+            }
+          })
+        } catch (error) {
+          hasMoreCommits = false
+        }
+      }
+    }
+  }
+
+  const days = Object.keys(dayCounts)
+    .sort()
+    .map((dayKey) => ({ contributionCount: dayCounts[dayKey] }))
+
+  const weeks = []
+  for (let i = 0; i < days.length; i += 7) {
+    weeks.push({ contributionDays: days.slice(i, i + 7) })
+  }
+
+  return weeks
 }
 
 function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
