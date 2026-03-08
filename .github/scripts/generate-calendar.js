@@ -361,7 +361,6 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     const midY = y + barHeight / 2
     const cornerRadius = 4
 
-    // Create smooth rounded rectangle bar
     const pathD = `
       M ${x1},${topY + cornerRadius}
       Q ${x1},${topY} ${x1 + cornerRadius},${topY}
