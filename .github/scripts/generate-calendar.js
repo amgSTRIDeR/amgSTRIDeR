@@ -501,28 +501,28 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
     `
   }
 
-  const rowHeight = 38
-  const barHeight = 30
-  const startX = 30
-  const startY = 86
-  const maxCount = sorted[0]?.count || 1
-  const maxBarWidth = 690
-  const minBarWidth = 240
-  const height = Math.max(170, startY + sorted.length * rowHeight + 18)
+  const rowHeight = 38;
+  const barHeight = 30;
+  const startX = 30;
+  const startY = 86;
+  const maxCount = sorted[0]?.count || 1;
+  const maxBarWidth = 690;
+  const minBarWidth = 240;
+  const height = Math.max(170, startY + sorted.length * rowHeight + 18);
 
-  let bars = ''
+  let bars = '';
 
   sorted.forEach((tech, index) => {
-    const y = startY + index * rowHeight
-    const color = tech.color || '#30363d'
-    const ratio = tech.count / maxCount
-    const barWidth = minBarWidth + (maxBarWidth - minBarWidth) * ratio
-    const x1 = startX
-    const x2 = startX + barWidth
-    const topY = y
-    const bottomY = y + barHeight
-    const midY = y + barHeight / 2
-    const cornerRadius = 4
+    const y = startY + index * rowHeight;
+    const color = tech.color || '#30363d';
+    const ratio = tech.count / maxCount;
+    const barWidth = minBarWidth + (maxBarWidth - minBarWidth) * ratio;
+    const x1 = startX;
+    const x2 = startX + barWidth;
+    const topY = y;
+    const bottomY = y + barHeight;
+    const midY = y + barHeight / 2;
+    const cornerRadius = 4;
 
     // Create smooth rounded rectangle bar
     const pathD = `
@@ -535,10 +535,10 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
       L ${x1 + cornerRadius},${bottomY}
       Q ${x1},${bottomY} ${x1},${bottomY - cornerRadius}
       Z
-    `
+    `;
 
     // Gradient ID for inner glow effect
-    const gradId = `techGrad${index}`
+    const gradId = `techGrad${index}`;
 
     bars += `
       <defs>
@@ -554,10 +554,10 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
         ${tech.name.toUpperCase()}
       </text>
       <text x="${x2 + 14}" y="${y + 21}" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        ${tech.count} repos · ${((tech.count / analyzedReposCount) * 100).toFixed(1)}%
+        ${((tech.count / analyzedReposCount) * 100).toFixed(1)}%
       </text>
-    `
-  })
+    `;
+  });
 
   return `
     <svg xmlns="http://www.w3.org/2000/svg" width="${cardWidth}" height="${height}" viewBox="0 0 ${cardWidth} ${height}" role="img" aria-labelledby="title desc">
@@ -574,11 +574,11 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
       <rect x="1" y="1" width="${cardWidth - 2}" height="${height - 2}" fill="none" stroke="#30363d" rx="14" />
 
       <text x="30" y="48" fill="#c9d1d9" font-size="28" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-weight="700">Technology Stack</text>
-      <text x="30" y="72" fill="#8b949e" font-size="14" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">Calculated from package.json dependencies in ${analyzedReposCount} repositories</text>
+      <text x="30" y="72" fill="#8b949e" font-size="14" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif">Calculated from package.json dependencies</text>
 
       ${bars}
     </svg>
-  `
+  `;
 }
 
 async function main() {
