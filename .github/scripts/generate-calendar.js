@@ -408,7 +408,11 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
   if (otherPercent > 0) {
     mainLangs.push({ name: 'Other', percent: otherPercent });
   }
-  const sorted = mainLangs.sort((a, b) => b.percent - a.percent);
+  const sorted = mainLangs.sort((a, b) => {
+    if (a.name === 'Other') return 1;
+    if (b.name === 'Other') return -1;
+    return b.percent - a.percent;
+  });
 
   if (!sorted.length) {
     return {
