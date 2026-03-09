@@ -426,7 +426,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
   const startX = offsetX + 10
   const startY = offsetY + 8
   const maxPercent = sorted[0]?.percent || 1
-  const maxBarWidth = Math.min(maxWidth - 120, 710)
+  const maxBarWidth = Math.min(maxWidth - 120, 600)
   const minBarWidth = Math.max(220, Math.min(maxBarWidth - 80, 280))
 
   let svg = ''
