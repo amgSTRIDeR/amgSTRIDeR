@@ -90,8 +90,15 @@ async function getRepos() {
     page += 1
     await new Promise(r => setTimeout(r, 200));
   }
-  // Only keep repos created by the user (not forks, owner.login === username)
-  return allRepos.filter(repo => !repo.fork && repo.owner && repo.owner.login && repo.owner.login.toLowerCase() === username.toLowerCase());
+  // Only keep repos created by the user (not forks, not archived, owner.login === username)
+  return allRepos.filter(
+    repo =>
+      !repo.fork &&
+      !repo.archived &&
+      repo.owner &&
+      repo.owner.login &&
+      repo.owner.login.toLowerCase() === username.toLowerCase()
+  );
 }
 
 async function getLanguages(url) {
