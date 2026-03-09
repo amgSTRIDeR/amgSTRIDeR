@@ -396,9 +396,13 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
       name,
       percent: (value / total) * 100
     }))
-    .filter((lang) => !technologyNameSet.has(lang.name.toLowerCase()) && lang.name !== 'Dockerfile')
+    .filter((lang) =>
+      !technologyNameSet.has(lang.name.toLowerCase()) &&
+      lang.name !== 'Dockerfile' &&
+      lang.name.toLowerCase() !== 'php' &&
+      lang.percent >= 1
+    )
     .sort((a, b) => b.percent - a.percent)
-    .slice(0, 10)
 
   if (!sorted.length) {
     return {
