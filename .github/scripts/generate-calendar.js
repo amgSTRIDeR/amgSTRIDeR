@@ -80,39 +80,43 @@ async function getRepos() {
   let allRepos = []
   let page = 1
   let hasMore = true
-
   while (hasMore) {
     const res = await axios.get(
-      `https://api.github.com/user/repos?per_page=100&page=${page}&visibility=all&affiliation=owner,collaborator,organization_member`,
+      `https://api.github.com/user/repos?per_page=100&page=${page}&visibility=all&affiliation=owner`,
       { headers }
     )
     allRepos = allRepos.concat(res.data)
     hasMore = res.data.length === 100
     page += 1
+    await new Promise(r => setTimeout(r, 200));
   }
-
-  return allRepos
+  // Only keep repos created by the user (not forks, owner.login === username)
+  return allRepos.filter(repo => !repo.fork && repo.owner && repo.owner.login && repo.owner.login.toLowerCase() === username.toLowerCase());
 }
 
 async function getLanguages(url) {
+  await new Promise(r => setTimeout(r, 200));
   const res = await axios.get(url, { headers })
   return res.data
 }
 
 async function getRepoPackageJson(repo) {
   try {
+    await new Promise(r => setTimeout(r, 200));
     const res = await axios.get(
       `https://api.github.com/repos/${repo.full_name}/contents/package.json`,
       { headers }
     )
-
     const base64Content = res.data?.content
     if (!base64Content) return null
-
     const decoded = Buffer.from(base64Content, 'base64').toString('utf-8')
     return JSON.parse(decoded)
   } catch (error) {
     if (error?.response?.status === 404) return null
+    if (error?.response?.status === 403 || error?.response?.status === 429) {
+      await new Promise(r => setTimeout(r, 5000));
+      return getRepoPackageJson(repo);
+    }
     return null
   }
 }
@@ -145,7 +149,7 @@ function collectTechnologyUsage(techCounts, dependencySet) {
   })
 }
 
-async function getContributions() {
+async function getContributions(repos) {
   const totalDays = 35
   const dayCounts = {}
   const now = new Date()
@@ -160,20 +164,21 @@ async function getContributions() {
     dayCounts[day.toISOString().slice(0, 10)] = 0
   }
 
-  const repos = await getRepos()
+  // Limit the number of analyzed repositories (e.g., 50)
+  const limitedRepos = repos.slice(0, 50)
 
-  for (const repo of repos) {
+  for (const repo of limitedRepos) {
     let branches = []
     let branchPage = 1
     let hasMoreBranches = true
 
     while (hasMoreBranches) {
       try {
+        await new Promise(r => setTimeout(r, 200));
         const branchRes = await axios.get(
           `https://api.github.com/repos/${repo.full_name}/branches?per_page=100&page=${branchPage}`,
           { headers }
         )
-
         branches = branches.concat(branchRes.data)
         hasMoreBranches = branchRes.data.length === 100
         branchPage += 1
@@ -192,29 +197,30 @@ async function getContributions() {
 
       while (hasMoreCommits) {
         try {
+          await new Promise(r => setTimeout(r, 200));
           const commitRes = await axios.get(
             `https://api.github.com/repos/${repo.full_name}/commits?sha=${encodeURIComponent(branch.name)}&author=${encodeURIComponent(username)}&since=${encodeURIComponent(sinceIso)}&per_page=100&page=${commitPage}`,
             { headers }
           )
-
           const commits = commitRes.data
           hasMoreCommits = commits.length === 100
           commitPage += 1
-
           commits.forEach((commit) => {
             const sha = commit?.sha
             if (!sha || seenCommitShas.has(sha)) return
             seenCommitShas.add(sha)
-
             const authoredAt = commit?.commit?.author?.date || commit?.commit?.committer?.date
             if (!authoredAt) return
-
             const dayKey = new Date(authoredAt).toISOString().slice(0, 10)
             if (dayCounts[dayKey] !== undefined) {
               dayCounts[dayKey] += 1
             }
           })
         } catch (error) {
+          if (error?.response?.status === 403 || error?.response?.status === 429) {
+            await new Promise(r => setTimeout(r, 5000));
+            continue;
+          }
           hasMoreCommits = false
         }
       }
@@ -251,7 +257,7 @@ function generateContributionGraph(weeks, offsetX, offsetY, width, height) {
   
   const stepX = graphWidth / (displayDays.length - 1)
   
-  // Ось Y: 0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-30,31+
+  // Y axis: 0,1,2,3,4,5,6,7,8,9,10,11-15,16-20,21-30,31+
   let ySteps = [0,1,2,3,4,5,6,7,8,9,10,15,20,30];
   if (maxContributions > 30) {
     ySteps.push(maxContributions);
@@ -559,16 +565,17 @@ function generateTechnologyStackSvg(techCounts, analyzedReposCount) {
 }
 
 async function main() {
-  const weeks = await getContributions()
-  const repos = await getRepos()
+  const repos = await getRepos();
+  const weeks = await getContributions(repos);
 
   let languageTotals = {}
   let dependencyTechTotals = {}
   let analyzedDependencyRepos = 0
 
-  for (const repo of repos) {
-    if (repo.fork) continue
+  // Limit the number of analyzed repositories (e.g., 50)
+  const limitedRepos = repos.slice(0, 50)
 
+  for (const repo of limitedRepos) {
     const langs = await getLanguages(repo.languages_url)
     for (const [name, value] of Object.entries(langs)) {
       languageTotals[name] = (languageTotals[name] || 0) + value
