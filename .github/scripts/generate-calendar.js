@@ -391,7 +391,7 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     }
   }
 
-  const sorted = Object.entries(languages)
+  const entries = Object.entries(languages)
     .map(([name, value]) => ({
       name,
       percent: (value / total) * 100
@@ -399,10 +399,16 @@ function generateLanguages(languages, offsetX, offsetY, maxWidth) {
     .filter((lang) =>
       !technologyNameSet.has(lang.name.toLowerCase()) &&
       lang.name !== 'Dockerfile' &&
-      lang.name.toLowerCase() !== 'php' &&
-      lang.percent >= 1
-    )
-    .sort((a, b) => b.percent - a.percent)
+      lang.name.toLowerCase() !== 'php'
+    );
+
+  const mainLangs = entries.filter(lang => lang.percent >= 1);
+  const otherLangs = entries.filter(lang => lang.percent < 1);
+  const otherPercent = otherLangs.reduce((sum, lang) => sum + lang.percent, 0);
+  if (otherPercent > 0) {
+    mainLangs.push({ name: 'Other', percent: otherPercent });
+  }
+  const sorted = mainLangs.sort((a, b) => b.percent - a.percent);
 
   if (!sorted.length) {
     return {
