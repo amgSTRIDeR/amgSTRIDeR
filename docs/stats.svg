@@ -1,8 +1,8 @@
 
     <svg xmlns="http://www.w3.org/2000/svg"
          width="900"
-         height="576"
-         viewBox="0 0 900 576">
+         height="652"
+         viewBox="0 0 900 652">
        
       <defs>
         <linearGradient id="areaGradient" x1="0%" y1="0%" x2="0%" y2="100%">
@@ -15,7 +15,7 @@
       </defs>
       
       <rect width="100%" height="100%" fill="#0d1117" />
-      <rect x="10" y="10" width="880" height="556"
+      <rect x="10" y="10" width="880" height="632"
             rx="12" fill="#0d1117" stroke="#30363d" />
 
       <text x="30" y="45"
@@ -33,11 +33,11 @@
       </text>
 
       
-    <line x1="80" y1="110" x2="820" y2="110" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="141.42857142857142" x2="820" y2="141.42857142857142" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="172.85714285714286" x2="820" y2="172.85714285714286" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="204.28571428571428" x2="820" y2="204.28571428571428" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="235.71428571428572" x2="820" y2="235.71428571428572" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="267.1428571428571" x2="820" y2="267.1428571428571" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="298.57142857142856" x2="820" y2="298.57142857142856" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="330" x2="820" y2="330" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="110" x2="80" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="188.8235294117647" y1="110" x2="188.8235294117647" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="297.6470588235294" y1="110" x2="297.6470588235294" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="406.47058823529414" y1="110" x2="406.47058823529414" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="515.2941176470588" y1="110" x2="515.2941176470588" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="624.1176470588235" y1="110" x2="624.1176470588235" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="732.9411764705883" y1="110" x2="732.9411764705883" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" />
-    <polyline points="80,330 80,330 101.76470588235294,330 123.52941176470588,330 145.29411764705884,330 167.05882352941177,330 188.8235294117647,330 210.58823529411765,330 232.3529411764706,330 254.11764705882354,330 275.88235294117646,330 297.6470588235294,330 319.4117647058824,330 341.1764705882353,330 362.94117647058823,330 384.7058823529412,330 406.47058823529414,330 428.2352941176471,330 450,330 471.7647058823529,330 493.5294117647059,330 515.2941176470588,330 537.0588235294117,330 558.8235294117648,330 580.5882352941177,330 602.3529411764706,205.8974358974359 624.1176470588235,256.6666666666667 645.8823529411765,262.3076923076923 667.6470588235294,110 689.4117647058824,211.53846153846155 711.1764705882354,273.5897435897436 732.9411764705883,318.71794871794873 754.7058823529412,330 776.4705882352941,279.2307692307692 798.2352941176471,284.87179487179486 820,318.71794871794873 820,330" fill="url(#areaGradient)" opacity="0.4" />
-    <polyline points="80,330 101.76470588235294,330 123.52941176470588,330 145.29411764705884,330 167.05882352941177,330 188.8235294117647,330 210.58823529411765,330 232.3529411764706,330 254.11764705882354,330 275.88235294117646,330 297.6470588235294,330 319.4117647058824,330 341.1764705882353,330 362.94117647058823,330 384.7058823529412,330 406.47058823529414,330 428.2352941176471,330 450,330 471.7647058823529,330 493.5294117647059,330 515.2941176470588,330 537.0588235294117,330 558.8235294117648,330 580.5882352941177,330 602.3529411764706,205.8974358974359 624.1176470588235,256.6666666666667 645.8823529411765,262.3076923076923 667.6470588235294,110 689.4117647058824,211.53846153846155 711.1764705882354,273.5897435897436 732.9411764705883,318.71794871794873 754.7058823529412,330 776.4705882352941,279.2307692307692 798.2352941176471,284.87179487179486 820,318.71794871794873 " fill="none" stroke="#39d353" stroke-width="2.5" stroke-linejoin="round" />
-    <circle cx="80" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="101.76470588235294" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="123.52941176470588" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="145.29411764705884" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="167.05882352941177" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="188.8235294117647" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="210.58823529411765" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="232.3529411764706" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="254.11764705882354" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="275.88235294117646" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="297.6470588235294" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="319.4117647058824" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="341.1764705882353" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="362.94117647058823" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="384.7058823529412" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="406.47058823529414" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="428.2352941176471" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="450" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="471.7647058823529" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="493.5294117647059" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="515.2941176470588" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="537.0588235294117" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="558.8235294117648" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="580.5882352941177" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="602.3529411764706" cy="205.8974358974359" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="624.1176470588235" cy="256.6666666666667" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="645.8823529411765" cy="262.3076923076923" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="667.6470588235294" cy="110" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="689.4117647058824" cy="211.53846153846155" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="711.1764705882354" cy="273.5897435897436" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="732.9411764705883" cy="318.71794871794873" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="754.7058823529412" cy="330" r="2.5" fill="#30363d" opacity="0.5" /><circle cx="776.4705882352941" cy="279.2307692307692" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="798.2352941176471" cy="284.87179487179486" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" /><circle cx="820" cy="318.71794871794873" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" />
-    <text x="70" y="334" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">0</text><text x="70" y="302.57142857142856" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">6</text><text x="70" y="271.1428571428571" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">11</text><text x="70" y="239.71428571428572" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">17</text><text x="70" y="208.28571428571428" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">22</text><text x="70" y="176.85714285714286" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">28</text><text x="70" y="145.42857142857142" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">33</text><text x="70" y="114" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">39</text>
+    <line x1="80" y1="330" x2="820" y2="330" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="314.2857142857143" x2="820" y2="314.2857142857143" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="298.57142857142856" x2="820" y2="298.57142857142856" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="282.8571428571429" x2="820" y2="282.8571428571429" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="267.14285714285717" x2="820" y2="267.14285714285717" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="251.42857142857144" x2="820" y2="251.42857142857144" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="235.71428571428572" x2="820" y2="235.71428571428572" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="220" x2="820" y2="220" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="204.28571428571428" x2="820" y2="204.28571428571428" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="188.57142857142856" x2="820" y2="188.57142857142856" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="172.85714285714286" x2="820" y2="172.85714285714286" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="157.14285714285714" x2="820" y2="157.14285714285714" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="141.42857142857144" x2="820" y2="141.42857142857144" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="125.7142857142857" x2="820" y2="125.7142857142857" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="110" x2="820" y2="110" stroke="#30363d" stroke-width="1" opacity="0.3" /><line x1="80" y1="110" x2="80" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="188.8235294117647" y1="110" x2="188.8235294117647" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="297.6470588235294" y1="110" x2="297.6470588235294" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="406.47058823529414" y1="110" x2="406.47058823529414" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="515.2941176470588" y1="110" x2="515.2941176470588" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="624.1176470588235" y1="110" x2="624.1176470588235" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" /><line x1="732.9411764705883" y1="110" x2="732.9411764705883" y2="330" stroke="#30363d" stroke-width="1" opacity="0.2" />
+    <polyline points="80,330 80,235.71428571428572 101.76470588235294,235.71428571428572 123.52941176470588,330 145.29411764705884,330 167.05882352941177,188.57142857142856 188.8235294117647,282.8571428571429 210.58823529411765,330 232.3529411764706,330 254.11764705882354,314.2857142857143 275.88235294117646,330 297.6470588235294,330 319.4117647058824,267.14285714285717 341.1764705882353,172.85714285714286 362.94117647058823,330 384.7058823529412,330 406.47058823529414,314.2857142857143 428.2352941176471,330 450,330 471.7647058823529,330 493.5294117647059,330 515.2941176470588,330 537.0588235294117,133.57142857142856 558.8235294117648,330 580.5882352941177,298.57142857142856 602.3529411764706,127.28571428571428 624.1176470588235,330 645.8823529411765,330 667.6470588235294,330 689.4117647058824,251.42857142857144 711.1764705882354,314.2857142857143 732.9411764705883,314.2857142857143 754.7058823529412,330 776.4705882352941,330 798.2352941176471,330 820,314.2857142857143 820,330" fill="url(#areaGradient)" opacity="0.4" />
+    <polyline points="80,235.71428571428572 101.76470588235294,235.71428571428572 123.52941176470588,330 145.29411764705884,330 167.05882352941177,188.57142857142856 188.8235294117647,282.8571428571429 210.58823529411765,330 232.3529411764706,330 254.11764705882354,314.2857142857143 275.88235294117646,330 297.6470588235294,330 319.4117647058824,267.14285714285717 341.1764705882353,172.85714285714286 362.94117647058823,330 384.7058823529412,330 406.47058823529414,314.2857142857143 428.2352941176471,330 450,330 471.7647058823529,330 493.5294117647059,330 515.2941176470588,330 537.0588235294117,133.57142857142856 558.8235294117648,330 580.5882352941177,298.57142857142856 602.3529411764706,127.28571428571428 624.1176470588235,330 645.8823529411765,330 667.6470588235294,330 689.4117647058824,251.42857142857144 711.1764705882354,314.2857142857143 732.9411764705883,314.2857142857143 754.7058823529412,330 776.4705882352941,330 798.2352941176471,330 820,314.2857142857143 " fill="none" stroke="#39d353" stroke-width="2.5" stroke-linejoin="round" />
+    <circle cx="80" cy="235.71428571428572" r="3.5" fill="#ffb347" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="101.76470588235294" cy="235.71428571428572" r="3.5" fill="#ffb347" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="123.52941176470588" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="145.29411764705884" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="167.05882352941177" cy="188.57142857142856" r="3.5" fill="#ffb347" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="188.8235294117647" cy="282.8571428571429" r="3.5" fill="#2188ff" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="210.58823529411765" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="232.3529411764706" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="254.11764705882354" cy="314.2857142857143" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="275.88235294117646" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="297.6470588235294" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="319.4117647058824" cy="267.14285714285717" r="3.5" fill="#b392f0" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="341.1764705882353" cy="172.85714285714286" r="3.5" fill="#ffb347" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="362.94117647058823" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="384.7058823529412" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="406.47058823529414" cy="314.2857142857143" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="428.2352941176471" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="450" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="471.7647058823529" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="493.5294117647059" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="515.2941176470588" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="537.0588235294117" cy="133.57142857142856" r="3.5" fill="#00bfff" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="558.8235294117648" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="580.5882352941177" cy="298.57142857142856" r="3.5" fill="#28a745" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="602.3529411764706" cy="127.28571428571428" r="3.5" fill="#00bfff" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="624.1176470588235" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="645.8823529411765" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="667.6470588235294" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="689.4117647058824" cy="251.42857142857144" r="3.5" fill="#ff7b72" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="711.1764705882354" cy="314.2857142857143" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="732.9411764705883" cy="314.2857142857143" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" opacity="1" /><circle cx="754.7058823529412" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="776.4705882352941" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="798.2352941176471" cy="330" r="2.5" fill="#30363d" stroke="none" stroke-width="0" opacity="0.5" /><circle cx="820" cy="314.2857142857143" r="3.5" fill="#39d353" stroke="#0d1117" stroke-width="2" opacity="1" />
+    <text x="70" y="334" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">0</text><text x="70" y="318.2857142857143" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">1</text><text x="70" y="302.57142857142856" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">2</text><text x="70" y="286.8571428571429" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">3</text><text x="70" y="271.14285714285717" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">4</text><text x="70" y="255.42857142857144" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">5</text><text x="70" y="239.71428571428572" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">6</text><text x="70" y="224" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">7</text><text x="70" y="208.28571428571428" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">8</text><text x="70" y="192.57142857142856" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">9</text><text x="70" y="176.85714285714286" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">10</text><text x="70" y="161.14285714285714" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">11–15</text><text x="70" y="145.42857142857144" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">16–20</text><text x="70" y="129.7142857142857" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">21–30</text><text x="70" y="114" text-anchor="end" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">30</text>
     <text x="80" y="350" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">35</text><text x="450" y="350" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">17</text><text x="820" y="350" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" fill="#c9d1d9">1</text>
     <text x="450" y="375" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9">Days</text>
     <text x="45" y="220" text-anchor="middle" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#c9d1d9" transform="rotate(-90 45 220)">Contributions</text>
@@ -61,10 +61,10 @@
       <path d="
       M 40,422
       Q 40,418 44,418
-      L 756,418
-      Q 760,418 760,422
-      L 760,444
-      Q 760,448 756,448
+      L 636,418
+      Q 640,418 640,422
+      L 640,444
+      Q 640,448 636,448
       L 44,448
       Q 40,448 40,444
       Z
@@ -72,10 +72,10 @@
       <path d="
       M 40,422
       Q 40,418 44,418
-      L 756,418
-      Q 760,418 760,422
-      L 760,444
-      Q 760,448 756,448
+      L 636,418
+      Q 640,418 640,422
+      L 640,444
+      Q 640,448 636,448
       L 44,448
       Q 40,448 40,444
       Z
@@ -83,8 +83,8 @@
       <text x="56" y="439" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         JAVASCRIPT
       </text>
-      <text x="774" y="439" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
-        40.1%
+      <text x="654" y="439" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+        35.4%
       </text>
     
       <defs>
@@ -97,10 +97,10 @@
       <path d="
       M 40,460
       Q 40,456 44,456
-      L 500.70346865083707,456
-      Q 504.70346865083707,456 504.70346865083707,460
-      L 504.70346865083707,482
-      Q 504.70346865083707,486 500.70346865083707,486
+      L 490.8502554696712,456
+      Q 494.8502554696712,456 494.8502554696712,460
+      L 494.8502554696712,482
+      Q 494.8502554696712,486 490.8502554696712,486
       L 44,486
       Q 40,486 40,482
       Z
@@ -108,10 +108,10 @@
       <path d="
       M 40,460
       Q 40,456 44,456
-      L 500.70346865083707,456
-      Q 504.70346865083707,456 504.70346865083707,460
-      L 504.70346865083707,482
-      Q 504.70346865083707,486 500.70346865083707,486
+      L 490.8502554696712,456
+      Q 494.8502554696712,456 494.8502554696712,460
+      L 494.8502554696712,482
+      Q 494.8502554696712,486 490.8502554696712,486
       L 44,486
       Q 40,486 40,482
       Z
@@ -119,8 +119,8 @@
       <text x="56" y="477" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         HTML
       </text>
-      <text x="518.7034686508371" y="477" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
-        16.8%
+      <text x="508.8502554696712" y="477" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+        19.3%
       </text>
     
       <defs>
@@ -133,10 +133,10 @@
       <path d="
       M 40,498
       Q 40,494 44,494
-      L 392.0467228361965,494
-      Q 396.0467228361965,494 396.0467228361965,498
-      L 396.0467228361965,520
-      Q 396.0467228361965,524 392.0467228361965,524
+      L 387.93816323856936,494
+      Q 391.93816323856936,494 391.93816323856936,498
+      L 391.93816323856936,520
+      Q 391.93816323856936,524 387.93816323856936,524
       L 44,524
       Q 40,524 40,520
       Z
@@ -144,10 +144,10 @@
       <path d="
       M 40,498
       Q 40,494 44,494
-      L 392.0467228361965,494
-      Q 396.0467228361965,494 396.0467228361965,498
-      L 396.0467228361965,520
-      Q 396.0467228361965,524 392.0467228361965,524
+      L 387.93816323856936,494
+      Q 391.93816323856936,494 391.93816323856936,498
+      L 391.93816323856936,520
+      Q 391.93816323856936,524 387.93816323856936,524
       L 44,524
       Q 40,524 40,520
       Z
@@ -155,8 +155,80 @@
       <text x="56" y="515" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
         CSS
       </text>
-      <text x="410.0467228361965" y="515" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
-        6.9%
+      <text x="405.93816323856936" y="515" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+        8.0%
+      </text>
+    
+      <defs>
+        <linearGradient id="langGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.25" />
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      <path d="
+      M 40,536
+      Q 40,532 44,532
+      L 385.85772304467446,532
+      Q 389.85772304467446,532 389.85772304467446,536
+      L 389.85772304467446,558
+      Q 389.85772304467446,562 385.85772304467446,562
+      L 44,562
+      Q 40,562 40,558
+      Z
+    " fill="#30363d" />
+      <path d="
+      M 40,536
+      Q 40,532 44,532
+      L 385.85772304467446,532
+      Q 389.85772304467446,532 389.85772304467446,536
+      L 389.85772304467446,558
+      Q 389.85772304467446,562 385.85772304467446,562
+      L 44,562
+      Q 40,562 40,558
+      Z
+    " fill="url(#langGrad3)" />
+      <text x="56" y="553" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
+        JUPYTER NOTEBOOK
+      </text>
+      <text x="403.85772304467446" y="553" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+        7.7%
+      </text>
+    
+      <defs>
+        <linearGradient id="langGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0" />
+          <stop offset="50%" style="stop-color:#FFFFFF;stop-opacity:0.25" />
+          <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:0" />
+        </linearGradient>
+      </defs>
+      <path d="
+      M 40,574
+      Q 40,570 44,570
+      L 583.2930695663566,570
+      Q 587.2930695663566,570 587.2930695663566,574
+      L 587.2930695663566,596
+      Q 587.2930695663566,600 583.2930695663566,600
+      L 44,600
+      Q 40,600 40,596
+      Z
+    " fill="#30363d" />
+      <path d="
+      M 40,574
+      Q 40,570 44,570
+      L 583.2930695663566,570
+      Q 587.2930695663566,570 587.2930695663566,574
+      L 587.2930695663566,596
+      Q 587.2930695663566,600 583.2930695663566,600
+      L 44,600
+      Q 40,600 40,596
+      Z
+    " fill="url(#langGrad4)" />
+      <text x="56" y="591" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.5">
+        OTHER
+      </text>
+      <text x="601.2930695663566" y="591" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="500">
+        29.6%
       </text>
     
     </svg>
