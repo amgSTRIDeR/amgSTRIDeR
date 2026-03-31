@@ -36,10 +36,14 @@ jobs:
           LEETCODE_USERNAME: amgSTRIDeR
         run: node .github/scripts/update-leetcode-stats.js
 
+      - name: Download LeetCode SVG badge
+        run: |
+          curl -sSL "https://leetcode-badge-showcase.vercel.app/api?username=amgstrider&animated=true&theme=dark" -o docs/thumbnails/leetcode.svg
+
       - name: Commit and push updated README and SVG
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
-          git add README.md docs/stats.svg docs/thumbnails/technology-stack.svg
+          git add README.md docs/stats.svg docs/thumbnails/technology-stack.svg docs/thumbnails/leetcode.svg
           git commit -m "Update GitHub-style calendar and languages" || echo "No changes"
           git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
