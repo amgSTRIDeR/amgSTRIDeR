@@ -1,14 +1,16 @@
 # Aleksei Ovchinnikov
 
-**Software Engineer** | Frontend-focused
+**Software Engineer | Frontend Engineer | Angular Developer**
 
-Building reliable web applications and embeddable feature systems
+Building reliable, scalable web applications and reusable frontend systems with Angular and TypeScript.
 
 ---
 
 ## ⚡ Background
 
-Software Engineer with 2+ years of frontend experience and a strong engineering mindset shaped by 10+ years in safety-critical hydropower operations. Experienced in high-responsibility environments requiring reliability, structured incident response, and risk-aware decision-making.
+Software Engineer with 2 years and 7 months of professional experience delivering enterprise web applications, primarily with Angular, TypeScript, JavaScript, and RxJS.
+
+Previously spent 10+ years in safety-critical hydropower operations, developing a strong engineering mindset around reliability, structured incident response, and risk-aware decision-making.
 
 ---
 
