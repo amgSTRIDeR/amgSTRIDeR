@@ -44,7 +44,7 @@ Previously spent 10+ years in safety-critical hydropower operations, developing 
 ---
 
 <!-- stats start -->
-![GitHub Stats](docs/stats.svg)
+  ![GitHub Stats](docs/stats.svg)
 
 ![Technology Stack](docs/thumbnails/technology-stack.svg)
 <!-- stats end -->
