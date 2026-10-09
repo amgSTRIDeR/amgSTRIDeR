@@ -8,7 +8,16 @@ Building reliable, scalable web applications and reusable frontend systems with 
 
 ## ⚡ Background
 
-Software Engineer with 2 years and 7 months of professional experience delivering enterprise web applications, primarily with Angular, TypeScript, JavaScript, and RxJS.
+Software Engineer with 4+ years of hands-on frontend development experience, specializing in Angular,
+TypeScript, JavaScript, and RxJS.
+
+Built reusable, embeddable UI components deployed on SAP.com and integrated enterprise search with Coveo and OpenSearch.
+
+Experienced in frontend architecture, performance optimization, accessibility, authentication, and production releases.
+
+Use Claude Code and GitHub Copilot in development workflows.
+
+Additional hands-on backend experience with Node.js and NestJS, plus AWS cloud training and certification.
 
 Previously spent 10+ years in safety-critical hydropower operations, developing a strong engineering mindset around reliability, structured incident response, and risk-aware decision-making.
 
