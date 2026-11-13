@@ -33,7 +33,7 @@
       L 34,116
       Q 30,116 30,112
       Z
-    " fill="#FF5B7F" />
+    " fill="#3B7FB5" />
       <path d="
       M 30,90
       Q 30,86 34,86
@@ -46,10 +46,10 @@
       Z
     " fill="url(#techGrad0)" />
       <text x="46" y="107" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        ANGULAR
+        TYPESCRIPT
       </text>
       <text x="734" y="107" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        68.4%
+        70.0%
       </text>
     
       <defs>
@@ -62,30 +62,30 @@
       <path d="
       M 30,128
       Q 30,124 34,124
-      L 716,124
-      Q 720,124 720,128
-      L 720,150
-      Q 720,154 716,154
+      L 683.8571428571429,124
+      Q 687.8571428571429,124 687.8571428571429,128
+      L 687.8571428571429,150
+      Q 687.8571428571429,154 683.8571428571429,154
       L 34,154
       Q 30,154 30,150
       Z
-    " fill="#7FD499" />
+    " fill="#FF5B7F" />
       <path d="
       M 30,128
       Q 30,124 34,124
-      L 716,124
-      Q 720,124 720,128
-      L 720,150
-      Q 720,154 716,154
+      L 683.8571428571429,124
+      Q 687.8571428571429,124 687.8571428571429,128
+      L 687.8571428571429,150
+      Q 687.8571428571429,154 683.8571428571429,154
       L 34,154
       Q 30,154 30,150
       Z
     " fill="url(#techGrad1)" />
       <text x="46" y="145" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        RXJS
+        ANGULAR
       </text>
-      <text x="734" y="145" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        68.4%
+      <text x="701.8571428571429" y="145" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        65.0%
       </text>
     
       <defs>
@@ -98,30 +98,30 @@
       <path d="
       M 30,166
       Q 30,162 34,162
-      L 716,162
-      Q 720,162 720,166
-      L 720,188
-      Q 720,192 716,192
+      L 683.8571428571429,162
+      Q 687.8571428571429,162 687.8571428571429,166
+      L 687.8571428571429,188
+      Q 687.8571428571429,192 683.8571428571429,192
       L 34,192
       Q 30,192 30,188
       Z
-    " fill="#3B7FB5" />
+    " fill="#7FD499" />
       <path d="
       M 30,166
       Q 30,162 34,162
-      L 716,162
-      Q 720,162 720,166
-      L 720,188
-      Q 720,192 716,192
+      L 683.8571428571429,162
+      Q 687.8571428571429,162 687.8571428571429,166
+      L 687.8571428571429,188
+      Q 687.8571428571429,192 683.8571428571429,192
       L 34,192
       Q 30,192 30,188
       Z
     " fill="url(#techGrad2)" />
       <text x="46" y="183" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        TYPESCRIPT
+        RXJS
       </text>
-      <text x="734" y="183" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        68.4%
+      <text x="701.8571428571429" y="183" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        65.0%
       </text>
     
       <defs>
@@ -134,10 +134,10 @@
       <path d="
       M 30,204
       Q 30,200 34,200
-      L 612.1538461538462,200
-      Q 616.1538461538462,200 616.1538461538462,204
-      L 616.1538461538462,226
-      Q 616.1538461538462,230 612.1538461538462,230
+      L 587.4285714285714,200
+      Q 591.4285714285714,200 591.4285714285714,204
+      L 591.4285714285714,226
+      Q 591.4285714285714,230 587.4285714285714,230
       L 34,230
       Q 30,230 30,226
       Z
@@ -145,10 +145,10 @@
       <path d="
       M 30,204
       Q 30,200 34,200
-      L 612.1538461538462,200
-      Q 616.1538461538462,200 616.1538461538462,204
-      L 616.1538461538462,226
-      Q 616.1538461538462,230 612.1538461538462,230
+      L 587.4285714285714,200
+      Q 591.4285714285714,200 591.4285714285714,204
+      L 591.4285714285714,226
+      Q 591.4285714285714,230 587.4285714285714,230
       L 34,230
       Q 30,230 30,226
       Z
@@ -156,8 +156,8 @@
       <text x="46" y="221" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         JASMINE
       </text>
-      <text x="630.1538461538462" y="221" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        52.6%
+      <text x="605.4285714285714" y="221" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        50.0%
       </text>
     
       <defs>
@@ -170,10 +170,10 @@
       <path d="
       M 30,242
       Q 30,238 34,238
-      L 612.1538461538462,238
-      Q 616.1538461538462,238 616.1538461538462,242
-      L 616.1538461538462,264
-      Q 616.1538461538462,268 612.1538461538462,268
+      L 587.4285714285714,238
+      Q 591.4285714285714,238 591.4285714285714,242
+      L 591.4285714285714,264
+      Q 591.4285714285714,268 587.4285714285714,268
       L 34,268
       Q 30,268 30,264
       Z
@@ -181,10 +181,10 @@
       <path d="
       M 30,242
       Q 30,238 34,238
-      L 612.1538461538462,238
-      Q 616.1538461538462,238 616.1538461538462,242
-      L 616.1538461538462,264
-      Q 616.1538461538462,268 612.1538461538462,268
+      L 587.4285714285714,238
+      Q 591.4285714285714,238 591.4285714285714,242
+      L 591.4285714285714,264
+      Q 591.4285714285714,268 587.4285714285714,268
       L 34,268
       Q 30,268 30,264
       Z
@@ -192,8 +192,8 @@
       <text x="46" y="259" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         KARMA
       </text>
-      <text x="630.1538461538462" y="259" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        52.6%
+      <text x="605.4285714285714" y="259" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        50.0%
       </text>
     
       <defs>
@@ -206,10 +206,10 @@
       <path d="
       M 30,280
       Q 30,276 34,276
-      L 439.0769230769231,276
-      Q 443.0769230769231,276 443.0769230769231,280
-      L 443.0769230769231,302
-      Q 443.0769230769231,306 439.0769230769231,306
+      L 458.85714285714283,276
+      Q 462.85714285714283,276 462.85714285714283,280
+      L 462.85714285714283,302
+      Q 462.85714285714283,306 458.85714285714283,306
       L 34,306
       Q 30,306 30,302
       Z
@@ -217,10 +217,10 @@
       <path d="
       M 30,280
       Q 30,276 34,276
-      L 439.0769230769231,276
-      Q 443.0769230769231,276 443.0769230769231,280
-      L 443.0769230769231,302
-      Q 443.0769230769231,306 439.0769230769231,306
+      L 458.85714285714283,276
+      Q 462.85714285714283,276 462.85714285714283,280
+      L 462.85714285714283,302
+      Q 462.85714285714283,306 458.85714285714283,306
       L 34,306
       Q 30,306 30,302
       Z
@@ -228,8 +228,8 @@
       <text x="46" y="297" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         ESLINT
       </text>
-      <text x="457.0769230769231" y="297" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        26.3%
+      <text x="476.85714285714283" y="297" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        30.0%
       </text>
     
       <defs>
@@ -242,10 +242,10 @@
       <path d="
       M 30,318
       Q 30,314 34,314
-      L 439.0769230769231,314
-      Q 443.0769230769231,314 443.0769230769231,318
-      L 443.0769230769231,340
-      Q 443.0769230769231,344 439.0769230769231,344
+      L 458.85714285714283,314
+      Q 462.85714285714283,314 462.85714285714283,318
+      L 462.85714285714283,340
+      Q 462.85714285714283,344 458.85714285714283,344
       L 34,344
       Q 30,344 30,340
       Z
@@ -253,10 +253,10 @@
       <path d="
       M 30,318
       Q 30,314 34,314
-      L 439.0769230769231,314
-      Q 443.0769230769231,314 443.0769230769231,318
-      L 443.0769230769231,340
-      Q 443.0769230769231,344 439.0769230769231,344
+      L 458.85714285714283,314
+      Q 462.85714285714283,314 462.85714285714283,318
+      L 462.85714285714283,340
+      Q 462.85714285714283,344 458.85714285714283,344
       L 34,344
       Q 30,344 30,340
       Z
@@ -264,8 +264,8 @@
       <text x="46" y="335" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
         PRETTIER
       </text>
-      <text x="457.0769230769231" y="335" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        26.3%
+      <text x="476.85714285714283" y="335" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        30.0%
       </text>
     
       <defs>
@@ -278,30 +278,30 @@
       <path d="
       M 30,356
       Q 30,352 34,352
-      L 369.84615384615387,352
-      Q 373.84615384615387,352 373.84615384615387,356
-      L 373.84615384615387,378
-      Q 373.84615384615387,382 369.84615384615387,382
+      L 394.57142857142856,352
+      Q 398.57142857142856,352 398.57142857142856,356
+      L 398.57142857142856,378
+      Q 398.57142857142856,382 394.57142857142856,382
       L 34,382
       Q 30,382 30,378
       Z
-    " fill="#8B8B8B" />
+    " fill="#5FA8FF" />
       <path d="
       M 30,356
       Q 30,352 34,352
-      L 369.84615384615387,352
-      Q 373.84615384615387,352 373.84615384615387,356
-      L 373.84615384615387,378
-      Q 373.84615384615387,382 369.84615384615387,382
+      L 394.57142857142856,352
+      Q 398.57142857142856,352 398.57142857142856,356
+      L 398.57142857142856,378
+      Q 398.57142857142856,382 394.57142857142856,382
       L 34,382
       Q 30,382 30,378
       Z
     " fill="url(#techGrad7)" />
       <text x="46" y="373" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        EXPRESS
+        WEBPACK
       </text>
-      <text x="387.84615384615387" y="373" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        15.8%
+      <text x="412.57142857142856" y="373" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        20.0%
       </text>
     
       <defs>
@@ -314,30 +314,30 @@
       <path d="
       M 30,394
       Q 30,390 34,390
-      L 369.84615384615387,390
-      Q 373.84615384615387,390 373.84615384615387,394
-      L 373.84615384615387,416
-      Q 373.84615384615387,420 369.84615384615387,420
+      L 394.57142857142856,390
+      Q 398.57142857142856,390 398.57142857142856,394
+      L 398.57142857142856,416
+      Q 398.57142857142856,420 394.57142857142856,420
       L 34,420
       Q 30,420 30,416
       Z
-    " fill="#5FA8FF" />
+    " fill="#D464E8" />
       <path d="
       M 30,394
       Q 30,390 34,390
-      L 369.84615384615387,390
-      Q 373.84615384615387,390 373.84615384615387,394
-      L 373.84615384615387,416
-      Q 373.84615384615387,420 369.84615384615387,420
+      L 394.57142857142856,390
+      Q 398.57142857142856,390 398.57142857142856,394
+      L 398.57142857142856,416
+      Q 398.57142857142856,420 394.57142857142856,420
       L 34,420
       Q 30,420 30,416
       Z
     " fill="url(#techGrad8)" />
       <text x="46" y="411" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        WEBPACK
+        SCSS
       </text>
-      <text x="387.84615384615387" y="411" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        15.8%
+      <text x="412.57142857142856" y="411" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        20.0%
       </text>
     
       <defs>
@@ -350,30 +350,30 @@
       <path d="
       M 30,432
       Q 30,428 34,428
-      L 369.84615384615387,428
-      Q 373.84615384615387,428 373.84615384615387,432
-      L 373.84615384615387,454
-      Q 373.84615384615387,458 369.84615384615387,458
+      L 362.42857142857144,428
+      Q 366.42857142857144,428 366.42857142857144,432
+      L 366.42857142857144,454
+      Q 366.42857142857144,458 362.42857142857144,458
       L 34,458
       Q 30,458 30,454
       Z
-    " fill="#D464E8" />
+    " fill="#8B8B8B" />
       <path d="
       M 30,432
       Q 30,428 34,428
-      L 369.84615384615387,428
-      Q 373.84615384615387,428 373.84615384615387,432
-      L 373.84615384615387,454
-      Q 373.84615384615387,458 369.84615384615387,458
+      L 362.42857142857144,428
+      Q 366.42857142857144,428 366.42857142857144,432
+      L 366.42857142857144,454
+      Q 366.42857142857144,458 362.42857142857144,458
       L 34,458
       Q 30,458 30,454
       Z
     " fill="url(#techGrad9)" />
       <text x="46" y="449" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="700" letter-spacing="0.4">
-        SCSS
+        EXPRESS
       </text>
-      <text x="387.84615384615387" y="449" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
-        15.8%
+      <text x="380.42857142857144" y="449" font-family="Segoe UI, Roboto, Helvetica, Arial, sans-serif" font-size="13" fill="#FFFFFF" filter="url(#textSoftShadow)" font-weight="600">
+        15.0%
       </text>
     
     </svg>
