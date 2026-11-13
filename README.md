@@ -1,25 +1,24 @@
 # Aleksei Ovchinnikov
 
-**Software Engineer | Frontend Engineer | Angular Developer**
+**Frontend Engineer | Software Engineer | Angular & TypeScript**
 
-Building reliable, scalable web applications and reusable frontend systems with Angular and TypeScript.
+Building reusable web applications and frontend components, with a focus on Angular, TypeScript, and enterprise software development.
 
 ---
 
 ## ⚡ Background
 
-Software Engineer with 4+ years of hands-on frontend development experience, specializing in Angular,
-TypeScript, JavaScript, and RxJS.
+Frontend Engineer with commercial experience at EPAM Systems and in freelance web development, complemented by independent projects and continuous technical exploration.
 
-Built reusable, embeddable UI components deployed on SAP.com and integrated enterprise search with Coveo and OpenSearch.
+At EPAM Systems, developed reusable, embeddable Angular components deployed on SAP.com, integrating enterprise search solutions with Coveo and OpenSearch-backed REST services. Worked on frontend architecture, performance optimization, accessibility, authentication, automated testing, and Angular modernization.
 
-Experienced in frontend architecture, performance optimization, accessibility, authentication, and production releases.
+Also completed freelance web development projects, including building a landing page from scratch using JavaScript and PHP, and implementing features and bug fixes for an existing e-commerce application.
 
-Use Claude Code and GitHub Copilot in development workflows.
+Beyond commercial work, I develop independent applications, explore frontend and backend technologies, and contribute to personal and educational projects available on this GitHub profile.
 
-Additional hands-on backend experience with Node.js and NestJS, plus AWS cloud training and certification.
+Use Claude Code and GitHub Copilot in development workflows. Additional hands-on experience with Node.js and NestJS, supported by AWS Certified Developer – Associate certification.
 
-Previously spent 10+ years in safety-critical hydropower operations, developing a strong engineering mindset around reliability, structured incident response, and risk-aware decision-making.
+Previously spent 10+ years in safety-critical hydropower operations, developing an engineering approach focused on reliability, systematic problem-solving, and risk-aware decision-making.
 
 ---
 
