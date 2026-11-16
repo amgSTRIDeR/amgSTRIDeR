@@ -1,31 +1,39 @@
 # Aleksei Ovchinnikov
 
-**Software Engineer | Frontend Engineer | Angular Developer**
+**Software Engineer | Full-Stack Developer | Frontend Engineer**
 
-Building reliable, scalable web applications and reusable frontend systems with Angular and TypeScript.
+Building web applications and reusable frontend systems, with a strong focus on Angular, TypeScript, and full-stack development.
 
 ---
 
 ## ⚡ Background
 
-Software Engineer with 4+ years of hands-on frontend development experience, specializing in Angular,
-TypeScript, JavaScript, and RxJS.
+Software Engineer with commercial experience in enterprise software development at EPAM Systems, freelance web development, and independent technical projects.
 
-Built reusable, embeddable UI components deployed on SAP.com and integrated enterprise search with Coveo and OpenSearch.
+At EPAM Systems, developed reusable, embeddable Angular components deployed on SAP.com, integrating enterprise search solutions with Coveo and OpenSearch-backed REST APIs.
 
-Experienced in frontend architecture, performance optimization, accessibility, authentication, and production releases.
+Worked on frontend architecture, performance optimization, accessibility, authentication, automated testing, and Angular modernization.
 
-Use Claude Code and GitHub Copilot in development workflows.
+Beyond development, mentored students across multiple Rolling Scopes School courses as part of EPAM's non-project activities and conducted candidate interviews for an EPAM project.
 
-Additional hands-on backend experience with Node.js and NestJS, plus AWS cloud training and certification.
+My freelance experience began in 2022 and includes developing websites from scratch with JavaScript and PHP, maintaining multiple existing web applications, implementing features, and resolving bugs.
 
-Previously spent 10+ years in safety-critical hydropower operations, developing a strong engineering mindset around reliability, structured incident response, and risk-aware decision-making.
+My main production experience is with Angular, TypeScript, JavaScript, and RxJS. I also have hands-on experience with React, Node.js, NestJS, C#, .NET, Python, PostgreSQL, Microsoft SQL Server, MongoDB, and GraphQL through additional development and independent projects.
+
+I use Claude Code and GitHub Copilot in development workflows and hold the AWS Certified Developer – Associate certification.
+
+This GitHub profile contains independent applications, educational projects, and technical experiments across different technologies. Most enterprise projects are maintained in private repositories due to confidentiality restrictions.
+
+Previously spent over a decade in safety-critical hydropower operations, building a strong engineering foundation in reliability, structured problem-solving, and risk-aware decision-making.
 
 ---
 
 ## 🔧 Tech Stack
 
+### Frontend
+
 ![Angular](https://img.shields.io/badge/Angular-E74C5C?style=for-the-badge&logo=angular&logoColor=white)
+![React](https://img.shields.io/badge/React-4CADD0?style=for-the-badge&logo=react&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5B9FD8?style=for-the-badge&logo=typescript&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F8E547?style=for-the-badge&logo=javascript&logoColor=black)
 ![RxJS](https://img.shields.io/badge/RxJS-C8479B?style=for-the-badge&logo=reactivex&logoColor=white)
@@ -34,21 +42,47 @@ Previously spent 10+ years in safety-critical hydropower operations, developing 
 ![HTML](https://img.shields.io/badge/HTML5-E8652A?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-3B8AC4?style=for-the-badge&logo=css3&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-D689C9?style=for-the-badge&logo=sass&logoColor=white)
-![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-505050?style=for-the-badge&logo=githubcopilot&logoColor=white)
-![Coveo](https://img.shields.io/badge/Coveo-1372EC?style=for-the-badge&logoColor=white)
-![OpenSearch](https://img.shields.io/badge/OpenSearch-4A90E2?style=for-the-badge&logo=opensearch&logoColor=white)
+
+### Backend
+
 ![Node.js](https://img.shields.io/badge/Node.js-52A846?style=for-the-badge&logo=nodedotjs&logoColor=white)
 ![NestJS](https://img.shields.io/badge/NestJS-E85B6F?style=for-the-badge&logo=nestjs&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-7554A3?style=for-the-badge&logo=sharp&logoColor=white)
+![.NET](https://img.shields.io/badge/.NET-6848A5?style=for-the-badge&logo=dotnet&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+
+### Databases
+
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169A3?style=for-the-badge&logo=postgresql&logoColor=white)
+![Microsoft SQL Server](https://img.shields.io/badge/Microsoft%20SQL%20Server-B94A48?style=for-the-badge)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+
+### APIs & Integrations
+
+![REST API](https://img.shields.io/badge/REST%20API-555555?style=for-the-badge)
+![GraphQL](https://img.shields.io/badge/GraphQL-D932A2?style=for-the-badge&logo=graphql&logoColor=white)
+![Coveo](https://img.shields.io/badge/Coveo-1372EC?style=for-the-badge&logoColor=white)
+![OpenSearch](https://img.shields.io/badge/OpenSearch-4A90E2?style=for-the-badge&logo=opensearch&logoColor=white)
+
+### Testing
+
 ![Jest](https://img.shields.io/badge/Jest-D94455?style=for-the-badge&logo=jest&logoColor=white)
 ![Jasmine](https://img.shields.io/badge/Jasmine-9E5B96?style=for-the-badge&logo=jasmine&logoColor=white)
 ![Playwright](https://img.shields.io/badge/Playwright-45C951?style=for-the-badge&logo=playwright&logoColor=white)
 ![Karma](https://img.shields.io/badge/Karma-7BC241?style=for-the-badge&logo=karma&logoColor=white)
+
+### Cloud & Development Tools
+
 ![AWS](https://img.shields.io/badge/AWS-555555?style=for-the-badge&logo=amazonwebservices&logoColor=white)
-![REST API](https://img.shields.io/badge/REST%20API-555555?style=for-the-badge)
 ![Git](https://img.shields.io/badge/Git-F47D4C?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-505050?style=for-the-badge&logo=github&logoColor=white)
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-5B9FE8?style=for-the-badge&logo=github-actions&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-5B9FE8?style=for-the-badge&logo=githubactions&logoColor=white)
+
+### AI Development Tools
+
+![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-505050?style=for-the-badge&logo=githubcopilot&logoColor=white)
 
 ---
 
@@ -135,8 +169,8 @@ Projects were developed in 2022-2023 independently without AI assistance during 
 [![CodeWars](https://www.codewars.com/users/amgstrider/badges/large)](https://www.codewars.com/users/amgstrider)
 
 <!-- leetcode start -->
-[![LeetCode](https://img.shields.io/badge/LeetCode-128%2F4110%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
-[![Easy](https://img.shields.io/badge/Easy-53%2F975-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-61%2F2146-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-14%2F989-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
+[![LeetCode](https://img.shields.io/badge/LeetCode-128%2F4114%20Solved-FFB81C?style=for-the-badge&logo=leetcode)](https://leetcode.com/amgSTRIDeR)
+[![Easy](https://img.shields.io/badge/Easy-53%2F976-00AF9B?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Medium](https://img.shields.io/badge/Medium-61%2F2148-FFB800?style=for-the-badge)](https://leetcode.com/amgSTRIDeR) [![Hard](https://img.shields.io/badge/Hard-14%2F990-FF375F?style=for-the-badge)](https://leetcode.com/amgSTRIDeR)
 <!-- leetcode end -->
 
 ![LeetCode Badges](docs/thumbnails/leetcode.svg)
