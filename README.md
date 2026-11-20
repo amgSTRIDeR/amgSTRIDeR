@@ -1,6 +1,6 @@
 # Aleksei Ovchinnikov
 
-**Software Engineer | Full-Stack Developer | Frontend Engineer**
+**Angular Developer | TypeScript, RxJS, NgRx | Performance Optimization & Application Architecture**
 
 Building web applications and reusable frontend systems, with a strong focus on Angular, TypeScript, and full-stack development.
 
@@ -8,23 +8,11 @@ Building web applications and reusable frontend systems, with a strong focus on 
 
 ## ⚡ Background
 
-Software Engineer with commercial experience in enterprise software development at EPAM Systems, freelance web development, and independent technical projects.
-
-At EPAM Systems, developed reusable, embeddable Angular components deployed on SAP.com, integrating enterprise search solutions with Coveo and OpenSearch-backed REST APIs.
-
-Worked on frontend architecture, performance optimization, accessibility, authentication, automated testing, and Angular modernization.
-
-Beyond development, mentored students across multiple Rolling Scopes School courses as part of EPAM's non-project activities and conducted candidate interviews for an EPAM project.
-
-My freelance experience began in 2022 and includes developing websites from scratch with JavaScript and PHP, maintaining multiple existing web applications, implementing features, and resolving bugs.
-
-My main production experience is with Angular, TypeScript, JavaScript, and RxJS. I also have hands-on experience with React, Node.js, NestJS, C#, .NET, Python, PostgreSQL, Microsoft SQL Server, MongoDB, and GraphQL through additional development and independent projects.
-
-I use Claude Code and GitHub Copilot in development workflows and hold the AWS Certified Developer – Associate certification.
-
-This GitHub profile contains independent applications, educational projects, and technical experiments across different technologies. Most enterprise projects are maintained in private repositories due to confidentiality restrictions.
-
-Previously spent over a decade in safety-critical hydropower operations, building a strong engineering foundation in reliability, structured problem-solving, and risk-aware decision-making.
+Angular Developer with nearly 4 years of experience building and optimizing enterprise applications. At EPAM, I led
+performance initiatives for SAP.com that cut initial bundle size by up to 40% and Total Blocking Time (TBT) by 52%
+using modern Angular techniques. I specialize in creating reusable component architectures and have a unique
+background managing large-scale critical infrastructure, bringing a strong sense of ownership and reliability to
+software engineering.
 
 ---
 
