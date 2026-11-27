@@ -1,18 +1,23 @@
-# Aleksei Ovchinnikov
+# Hi, I'm Aleksei 👋
 
-**Angular Developer | TypeScript, RxJS, NgRx | Performance Optimization & Application Architecture**
+**Software Engineer · Angular & TypeScript · AI & Agentic Development**
 
-Building web applications and reusable frontend systems, with a strong focus on Angular, TypeScript, and full-stack development.
+I build fast, maintainable web apps and AI-powered developer tools.
+2.5 years at **EPAM Systems** shipping enterprise software for **SAP.com**,
+now focused on LLM applications with the **Claude API** and **Model Context Protocol (MCP)**.
+
+📍 [Montevideo], Uruguay (UTC-3) · 🌎 Open to remote roles ·
+[LinkedIn](https://www.linkedin.com/in/aleksei-ovchinnikov/) ·
+[Email](mailto:alex.ovchinnikov.dev@gmail.com)
 
 ---
 
-## ⚡ Background
+## 🏆 Selected impact at EPAM (SAP.com)
 
-Angular Developer with nearly 4 years of experience building and optimizing enterprise applications. At EPAM, I led
-performance initiatives for SAP.com that cut initial bundle size by up to 40% and Total Blocking Time (TBT) by 52%
-using modern Angular techniques. I specialize in creating reusable component architectures and have a unique
-background managing large-scale critical infrastructure, bringing a strong sense of ownership and reliability to
-software engineering.
+- ⚡ Cut initial bundle size by **up to 40%** and Total Blocking Time by **52%** (Angular `@defer`, lazy loading, dependency pruning)
+- 🔎 Architected reusable, embeddable search components with **Coveo** and **OpenSearch**
+- 🔐 Migrated legacy auth to **Microsoft Entra ID** + Microsoft Graph API
+- 🧩 Modernized enterprise Angular apps with **Signals** and **zoneless** change detection
 
 ---
 
@@ -27,6 +32,7 @@ software engineering.
 ![RxJS](https://img.shields.io/badge/RxJS-C8479B?style=for-the-badge&logo=reactivex&logoColor=white)
 ![NgRx](https://img.shields.io/badge/NgRx-8B5BA6?style=for-the-badge&logo=redux&logoColor=white)
 ![Angular Material](https://img.shields.io/badge/Angular%20Material-E74C5C?style=for-the-badge&logo=angular&logoColor=white)
+![WCAG](https://img.shields.io/badge/WCAG-555555?style=for-the-badge)
 ![HTML](https://img.shields.io/badge/HTML5-E8652A?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS](https://img.shields.io/badge/CSS3-3B8AC4?style=for-the-badge&logo=css3&logoColor=white)
 ![SCSS](https://img.shields.io/badge/SCSS-D689C9?style=for-the-badge&logo=sass&logoColor=white)
@@ -38,6 +44,7 @@ software engineering.
 ![C#](https://img.shields.io/badge/C%23-7554A3?style=for-the-badge&logo=sharp&logoColor=white)
 ![.NET](https://img.shields.io/badge/.NET-6848A5?style=for-the-badge&logo=dotnet&logoColor=white)
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
 
 ### Databases
@@ -63,14 +70,40 @@ software engineering.
 ### Cloud & Development Tools
 
 ![AWS](https://img.shields.io/badge/AWS-555555?style=for-the-badge&logo=amazonwebservices&logoColor=white)
+![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F47D4C?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-505050?style=for-the-badge&logo=github&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-5B9FE8?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ### AI Development Tools
 
+![Claude API](https://img.shields.io/badge/Claude%20API-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 ![Claude Code](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
+![MCP](https://img.shields.io/badge/MCP-555555?style=for-the-badge)
+![Agent Skills](https://img.shields.io/badge/Agent%20Skills-555555?style=for-the-badge)
+![Tool Use](https://img.shields.io/badge/Tool%20Use-555555?style=for-the-badge)
 ![GitHub Copilot](https://img.shields.io/badge/GitHub%20Copilot-505050?style=for-the-badge&logo=githubcopilot&logoColor=white)
+
+---
+
+## 📜 Certifications
+
+- [Claude Certified Architect – Foundations](https://verify.skilljar.com/c/2s955qp6frwv) — Anthropic
+- [AWS Certified Developer – Associate](https://www.credly.com/badges/2f2512b5-3c4a-458c-b4ed-55fff5ae60c1/linked_in_profile)
+- [Certified Mid-Level Angular Developer](https://certificates.dev/c/a3066249-06a6-427e-a183-5515d5b42185)
+- [Coveo Architect Level 1](https://levelup.coveo.com/student/award/hqtGU7uYdyPc3fMds7sEVGDp)
+
+---
+
+<details>
+<summary>📚 Training</summary>
+
+- Anthropic: Building with the Claude API · MCP (Intro & Advanced) · Agent Skills · Claude Code in Action
+- RS School: JavaScript/Front-end · Angular · Node.js · AWS Cloud Developer
+- Netology: JavaScript Programmer
+
+</details>
 
 ---
 
