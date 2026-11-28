@@ -205,10 +205,3 @@ Projects were developed in 2022-2023 independently without AI assistance during 
 ![Russian-Native](https://img.shields.io/badge/Russian-6B8DC3?style=for-the-badge&logoColor=white)![Native-555555](https://img.shields.io/badge/Native-555555?style=for-the-badge&logoColor=white)
 
 ![Spanish-A2](https://img.shields.io/badge/Spanish-E8C547?style=for-the-badge&logoColor=black)![A2-555555](https://img.shields.io/badge/A2-555555?style=for-the-badge&logoColor=white)
-
----
-
-## 💬 Get in Touch
-
-📧 [alex.ovchinnikov.dev@gmail.com](mailto:alex.ovchinnikov.dev@gmail.com)  
-💼 [LinkedIn](https://www.linkedin.com/in/aleksei-ovchinnikov)
